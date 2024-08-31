@@ -1,0 +1,2691 @@
+docker_connections:
+- connections:
+  - 172.18.0.7
+  - 172.18.0.6
+  - 172.18.0.5
+  container_id: 2e31aab0d5ab
+  pid: '215253'
+- connections:
+  - 172.18.0.7
+  - 172.18.0.5
+  container_id: 3252ab31b5a1
+  pid: '214901'
+- connections:
+  - 172.18.0.7
+  - 172.18.0.5
+  container_id: a8f592e12b7a
+  pid: '215254'
+- connections:
+  - 172.18.0.9
+  - 3.248.237.149
+  - 172.18.0.8
+  - 172.18.0.10
+  - 172.18.0.4
+  - 172.18.0.3
+  container_id: 311bfcaee8d9
+  pid: '215072'
+- connections:
+  - 172.18.0.7
+  container_id: 4ee4407a436f
+  pid: '214887'
+- connections:
+  - 172.18.0.7
+  container_id: e5ea3792a6cd
+  pid: '215193'
+- connections:
+  - 172.18.0.9
+  - 172.18.0.3
+  - 172.18.0.10
+  container_id: aa00736a7f84
+  pid: '215064'
+- connections:
+  - 172.18.0.9
+  container_id: e6837043d72a
+  pid: '214902'
+- connections: []
+  container_id: 1f0e4ee10e24
+  pid: '214888'
+docker_containers:
+- AppArmorProfile: docker-default
+  Args:
+  - -c
+  - python main.py
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - /bin/sh
+    - -c
+    - python main.py
+    Domainname: ''
+    Entrypoint: null
+    Env:
+    - APP_NAME=app-a
+    - TENANT=paula_vadinho_corp
+    - PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - LANG=C.UTF-8
+    - GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
+    - PYTHON_VERSION=3.10.12
+    - PYTHON_PIP_VERSION=23.0.1
+    - PYTHON_SETUPTOOLS_VERSION=65.5.1
+    - PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py
+    - PYTHON_GET_PIP_SHA256=45a2bb8bf2bb5eff16fdd00faef6f29731831c7c59bd9fc2bf1f3bed511ff1fe
+    ExposedPorts:
+      8000/tcp: {}
+    Hostname: 2e31aab0d5ab
+    Image: caqueiroz/fastapp_api:3.0
+    Labels:
+      com.docker.compose.config-hash: 69c30b1041447e1ca4c18de92758ab9ee793c2cbc1eda3e633a2e3721967ab12
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: app-a
+      com.docker.compose.version: 2.29.1
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: ''
+    Volumes: null
+    WorkingDir: /app
+  Created: '2024-08-30T14:18:01.296443415Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9-init/diff:/var/lib/docker/overlay2/20faf145233e71dcd2a9ab8686487b140075e8c6d50de9a356f50afa38f56d32/diff:/var/lib/docker/overlay2/ed91d8a97899878eaff8b7246d74ac376be3275f1ae2826d392438fc55c04035/diff:/var/lib/docker/overlay2/389596a4340daf0d5edbe8382f6bbbb0e0797f9b93bbcdc77392e8c665166d68/diff:/var/lib/docker/overlay2/678226b456d0c8ebeb6d5ae01dda2489859b666c229e6747fcfca48c3a1d18b4/diff:/var/lib/docker/overlay2/076cdbea2c44d9ded9077a2bfeb552961be0b6656f72b0a9fd9ea0fd21feb301/diff:/var/lib/docker/overlay2/cfb9f3c81d73499786c1c9b7828fc2f8f98c9aaaa351a9bd47701cca60f2785a/diff:/var/lib/docker/overlay2/dd8f2ae9260244528bb3b18cd9b0f9df828b3a4921dff585d150a28586b424ce/diff:/var/lib/docker/overlay2/21ddcbac950ac279182fb8a70190f355b1868da61ec616bb78ab7de2ededee99/diff
+      MergedDir: /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/merged
+      UpperDir: /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/diff
+      WorkDir: /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-a.py:/app/main.py:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-a.py:/app/utils.py:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      8000/tcp:
+      - HostIp: ''
+        HostPort: '8001'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01/hostname
+  HostsPath: /var/lib/docker/containers/2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01/hosts
+  Id: 2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01
+  Image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+  LogPath: /var/lib/docker/containers/2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01/2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /app/main.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-a.py
+    Type: bind
+  - Destination: /app/utils.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-a.py
+    Type: bind
+  Name: /observability-clientside-app-a-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-app-a-1
+        - app-a
+        DNSNames:
+        - observability-clientside-app-a-1
+        - app-a
+        - 2e31aab0d5ab
+        DriverOpts: null
+        EndpointID: dcc11b4b2a14dba931f8f02b625f79ec7d85775b3874839d38c3177162d7676e
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.9
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:09
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      8000/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '8001'
+      - HostIp: '::'
+        HostPort: '8001'
+    SandboxID: 6c8962c51eaef82eb5497684810538c5ece494f53ff8f5fd44d13350f9ff0084
+    SandboxKey: /var/run/docker/netns/6c8962c51eae
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /bin/sh
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/2e31aab0d5ab8637ac7aa878cbbb295ec2cb70c88c29005d94a996b060469e01/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 215253
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.841437257Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - -c
+  - python main.py
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - /bin/sh
+    - -c
+    - python main.py
+    Domainname: ''
+    Entrypoint: null
+    Env:
+    - APP_NAME=app-c
+    - TENANT=paula_vadinho_corp
+    - PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - LANG=C.UTF-8
+    - GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
+    - PYTHON_VERSION=3.10.12
+    - PYTHON_PIP_VERSION=23.0.1
+    - PYTHON_SETUPTOOLS_VERSION=65.5.1
+    - PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py
+    - PYTHON_GET_PIP_SHA256=45a2bb8bf2bb5eff16fdd00faef6f29731831c7c59bd9fc2bf1f3bed511ff1fe
+    ExposedPorts:
+      8000/tcp: {}
+    Hostname: 3252ab31b5a1
+    Image: caqueiroz/fastapp_api:3.0
+    Labels:
+      com.docker.compose.config-hash: 81f525212a58f458b36c30aa6263ac777adacb8c2c6683a76025e947a04256ea
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: app-c
+      com.docker.compose.version: 2.29.1
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: ''
+    Volumes: null
+    WorkingDir: /app
+  Created: '2024-08-30T14:18:01.296406296Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd-init/diff:/var/lib/docker/overlay2/20faf145233e71dcd2a9ab8686487b140075e8c6d50de9a356f50afa38f56d32/diff:/var/lib/docker/overlay2/ed91d8a97899878eaff8b7246d74ac376be3275f1ae2826d392438fc55c04035/diff:/var/lib/docker/overlay2/389596a4340daf0d5edbe8382f6bbbb0e0797f9b93bbcdc77392e8c665166d68/diff:/var/lib/docker/overlay2/678226b456d0c8ebeb6d5ae01dda2489859b666c229e6747fcfca48c3a1d18b4/diff:/var/lib/docker/overlay2/076cdbea2c44d9ded9077a2bfeb552961be0b6656f72b0a9fd9ea0fd21feb301/diff:/var/lib/docker/overlay2/cfb9f3c81d73499786c1c9b7828fc2f8f98c9aaaa351a9bd47701cca60f2785a/diff:/var/lib/docker/overlay2/dd8f2ae9260244528bb3b18cd9b0f9df828b3a4921dff585d150a28586b424ce/diff:/var/lib/docker/overlay2/21ddcbac950ac279182fb8a70190f355b1868da61ec616bb78ab7de2ededee99/diff
+      MergedDir: /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/merged
+      UpperDir: /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/diff
+      WorkDir: /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-c.py:/app/main.py:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-c.py:/app/utils.py:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      8000/tcp:
+      - HostIp: ''
+        HostPort: '8003'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa/hostname
+  HostsPath: /var/lib/docker/containers/3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa/hosts
+  Id: 3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa
+  Image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+  LogPath: /var/lib/docker/containers/3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa/3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /app/main.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-c.py
+    Type: bind
+  - Destination: /app/utils.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-c.py
+    Type: bind
+  Name: /observability-clientside-app-c-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-app-c-1
+        - app-c
+        DNSNames:
+        - observability-clientside-app-c-1
+        - app-c
+        - 3252ab31b5a1
+        DriverOpts: null
+        EndpointID: 7999c4701c46057385deb6619d00c744e6b6eb3ac51af1b55f1b467094eab778
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.3
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:03
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      8000/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '8003'
+      - HostIp: '::'
+        HostPort: '8003'
+    SandboxID: ff996bb5f1cbec369175604550e80bd65dd01c5fc19d7f88f58768d6fd279745
+    SandboxKey: /var/run/docker/netns/ff996bb5f1cb
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /bin/sh
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/3252ab31b5a1325eff35e8a33600f6195cd4d5103721429c586a54513e397daa/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 214901
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.583612502Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - -c
+  - python main.py
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - /bin/sh
+    - -c
+    - python main.py
+    Domainname: ''
+    Entrypoint: null
+    Env:
+    - APP_NAME=app-a
+    - TENANT=paula_vadinho_corp
+    - PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - LANG=C.UTF-8
+    - GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
+    - PYTHON_VERSION=3.10.12
+    - PYTHON_PIP_VERSION=23.0.1
+    - PYTHON_SETUPTOOLS_VERSION=65.5.1
+    - PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py
+    - PYTHON_GET_PIP_SHA256=45a2bb8bf2bb5eff16fdd00faef6f29731831c7c59bd9fc2bf1f3bed511ff1fe
+    ExposedPorts:
+      8000/tcp: {}
+    Hostname: a8f592e12b7a
+    Image: caqueiroz/fastapp_api:3.0
+    Labels:
+      com.docker.compose.config-hash: 7286fce23ffcc2966b0ac0c432b6197dbd5749545fd5c711634687d4fccc2033
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: app-b
+      com.docker.compose.version: 2.29.1
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: ''
+    Volumes: null
+    WorkingDir: /app
+  Created: '2024-08-30T14:18:01.296344647Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302-init/diff:/var/lib/docker/overlay2/20faf145233e71dcd2a9ab8686487b140075e8c6d50de9a356f50afa38f56d32/diff:/var/lib/docker/overlay2/ed91d8a97899878eaff8b7246d74ac376be3275f1ae2826d392438fc55c04035/diff:/var/lib/docker/overlay2/389596a4340daf0d5edbe8382f6bbbb0e0797f9b93bbcdc77392e8c665166d68/diff:/var/lib/docker/overlay2/678226b456d0c8ebeb6d5ae01dda2489859b666c229e6747fcfca48c3a1d18b4/diff:/var/lib/docker/overlay2/076cdbea2c44d9ded9077a2bfeb552961be0b6656f72b0a9fd9ea0fd21feb301/diff:/var/lib/docker/overlay2/cfb9f3c81d73499786c1c9b7828fc2f8f98c9aaaa351a9bd47701cca60f2785a/diff:/var/lib/docker/overlay2/dd8f2ae9260244528bb3b18cd9b0f9df828b3a4921dff585d150a28586b424ce/diff:/var/lib/docker/overlay2/21ddcbac950ac279182fb8a70190f355b1868da61ec616bb78ab7de2ededee99/diff
+      MergedDir: /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/merged
+      UpperDir: /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/diff
+      WorkDir: /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-b.py:/app/main.py:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-b.py:/app/utils.py:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      8000/tcp:
+      - HostIp: ''
+        HostPort: '8002'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498/hostname
+  HostsPath: /var/lib/docker/containers/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498/hosts
+  Id: a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498
+  Image: sha256:f14565f6259dc6856cdfb8e2c8c916ef85bfdc142e068d826646333e0d02c990
+  LogPath: /var/lib/docker/containers/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /app/utils.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-b.py
+    Type: bind
+  - Destination: /app/main.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-b.py
+    Type: bind
+  Name: /observability-clientside-app-b-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-app-b-1
+        - app-b
+        DNSNames:
+        - observability-clientside-app-b-1
+        - app-b
+        - a8f592e12b7a
+        DriverOpts: null
+        EndpointID: 153471205f6c00bfd0459bd3221459ea100b6184b0c27aed8690c30259da5ddd
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.10
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:0a
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      8000/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '8002'
+      - HostIp: '::'
+        HostPort: '8002'
+    SandboxID: a6e009b267b2d84901ff6a7607720d109803ba583cd7dea2495bb6861e37a41d
+    SandboxKey: /var/run/docker/netns/a6e009b267b2
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /bin/sh
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 215254
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.845319829Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - --config.file=/etc/prometheus/prometheus.yml
+  - --log.level=error
+  - --storage.tsdb.path=/prometheus
+  - --web.console.libraries=/usr/share/prometheus/console_libraries
+  - --web.console.templates=/usr/share/prometheus/consoles
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --log.level=error
+    - --storage.tsdb.path=/prometheus
+    - --web.console.libraries=/usr/share/prometheus/console_libraries
+    - --web.console.templates=/usr/share/prometheus/consoles
+    Domainname: ''
+    Entrypoint:
+    - /bin/prometheus
+    Env:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ExposedPorts:
+      9090/tcp: {}
+    Hostname: 311bfcaee8d9
+    Image: prom/prometheus:v2.51.0
+    Labels:
+      com.docker.compose.config-hash: eda0d24b0f5f0950489386127dd2300cb99ff180a00925c537b185f024db6043
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:1d3b7f56885b6dd623f1785be963aa9c195f86bc256ea454e8d02a7980b79c53
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: prometheus-client
+      com.docker.compose.version: 2.29.1
+      maintainer: The Prometheus Authors <prometheus-developers@googlegroups.com>
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: nobody
+    Volumes:
+      /prometheus: {}
+    WorkingDir: /prometheus
+  Created: '2024-08-30T14:18:01.296305727Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d-init/diff:/var/lib/docker/overlay2/6bc6e7e79877ebd057ddf50378547b2a383575f5434a0222865441eca8aac05a/diff:/var/lib/docker/overlay2/f1a6dea9cc1ef2dd32ec7cd7275e5a4319c08d81ec8b7fea8b54511241287704/diff:/var/lib/docker/overlay2/66e1471c69b26600783174fbc9ff8f030c51b3110e7bbfa7f33b9de37ba81247/diff:/var/lib/docker/overlay2/5a76271f9b6a4736c272f291babe6d11988301c5cc99ca4bd3347998a889837f/diff:/var/lib/docker/overlay2/d7e0cced83d788e1ae85b6b75ba8c9a691c436ad24288a0883392935b390bc1f/diff:/var/lib/docker/overlay2/c566db338f53800a4fbaadf806652453fe640c3fd35b7f9763976fb52059ad84/diff:/var/lib/docker/overlay2/e3f9223c28933b6c5f40ea1d59cad82b2274cdd37553869ac175480cf0905c28/diff:/var/lib/docker/overlay2/6fa9e90e3f9a6c66a97ec9e9008b599be7dbae71b9e28cf86af902150d4d2ce9/diff:/var/lib/docker/overlay2/f815040a5c73858f1bd251191442227a26d9d7d368f9f1263a0200c146b52550/diff:/var/lib/docker/overlay2/32b7361b2e595b570ec8bf0417807c75fd0468b2d34ba29a2223fa7ff3d6a403/diff:/var/lib/docker/overlay2/22601ccca500167f38b0f7a38778cf4f661f766d7b17d15c4412941d75dbe349/diff:/var/lib/docker/overlay2/89f9fbebfdf95c14dfd483dbee9b3fcbf12e7414b8fb894c23808321b99ff0bc/diff
+      MergedDir: /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/merged
+      UpperDir: /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/diff
+      WorkDir: /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/prometheus-collector.yaml:/etc/prometheus/prometheus.yml:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/rules.yaml:/etc/prometheus/rules.yaml:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts:
+    - mimir.local:3.248.237.149
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings: {}
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a/hostname
+  HostsPath: /var/lib/docker/containers/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a/hosts
+  Id: 311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a
+  Image: sha256:1d3b7f56885b6dd623f1785be963aa9c195f86bc256ea454e8d02a7980b79c53
+  LogPath: /var/lib/docker/containers/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /etc/prometheus/rules.yaml
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/rules.yaml
+    Type: bind
+  - Destination: /prometheus
+    Driver: local
+    Mode: ''
+    Name: c4f6b7ffb0bfe382d8155c33e01aae4fa13ed7c3a1d5004a68a1cc1e84e229a7
+    Propagation: ''
+    RW: true
+    Source: /var/lib/docker/volumes/c4f6b7ffb0bfe382d8155c33e01aae4fa13ed7c3a1d5004a68a1cc1e84e229a7/_data
+    Type: volume
+  - Destination: /etc/prometheus/prometheus.yml
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/prometheus-collector.yaml
+    Type: bind
+  Name: /observability-clientside-prometheus-client-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-prometheus-client-1
+        - prometheus-client
+        DNSNames:
+        - observability-clientside-prometheus-client-1
+        - prometheus-client
+        - 311bfcaee8d9
+        DriverOpts: null
+        EndpointID: b07feb93cb05ede7538eeec3568b62e15317a9c989b9e17facff0882d1960719
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.7
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:07
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      9090/tcp: null
+    SandboxID: ee6f6d36fbab80261d4dd2460609121c82f8250d59dc80054e02d325a1148fae
+    SandboxKey: /var/run/docker/netns/ee6f6d36fbab
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /bin/prometheus
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 215072
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.766328216Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - -logtostderr
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd: null
+    Domainname: ''
+    Entrypoint:
+    - /usr/bin/cadvisor
+    - -logtostderr
+    Env:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - CADVISOR_HEALTHCHECK_URL=http://localhost:8080/healthz
+    ExposedPorts:
+      8080/tcp: {}
+    Healthcheck:
+      Interval: 30000000000
+      Test:
+      - CMD-SHELL
+      - wget --quiet --tries=1 --spider $CADVISOR_HEALTHCHECK_URL || exit 1
+      Timeout: 3000000000
+    Hostname: cadvisor
+    Image: gcr.io/cadvisor/cadvisor:v0.47.1
+    Labels:
+      com.docker.compose.config-hash: 6502744622e713eaa764d295be3081fbd74a16281a311feb12922544f854ab14
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:09d9bac33ce93f955bd355fe70bd23188b50fe77311c344c7f366db7770b76bb
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: cadvisor
+      com.docker.compose.version: 2.29.1
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: ''
+    Volumes: null
+    WorkingDir: ''
+  Created: '2024-08-30T14:16:06.064039004Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372-init/diff:/var/lib/docker/overlay2/05fbeb0b6743d617559139951eacf6065a6aa83ddf33d9aa65dded5ac95197a2/diff:/var/lib/docker/overlay2/893c27552f889d031e617ce5ff1e314c6c5839a3c336c69f5523dcea6302d3a7/diff:/var/lib/docker/overlay2/10df2278bd60a9f306acf466145bb79f1da703f305dd9d23674f237b51d1fb43/diff:/var/lib/docker/overlay2/fa23099c728c0a838ec591163dada7a6daa160ed4f16ea724ed1816e86e08774/diff:/var/lib/docker/overlay2/bff93dfc70cbe14bbab68d356ea9847ef694a741148320f058f0df06699dfa3b/diff
+      MergedDir: /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/merged
+      UpperDir: /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/diff
+      WorkDir: /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+    - /dev/disk/:/dev/disk:ro
+    - /:/rootfs:ro
+    - /var/run:/var/run:ro
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      8080/tcp:
+      - HostIp: ''
+        HostPort: '8080'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82/hostname
+  HostsPath: /var/lib/docker/containers/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82/hosts
+  Id: 4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82
+  Image: sha256:09d9bac33ce93f955bd355fe70bd23188b50fe77311c344c7f366db7770b76bb
+  LogPath: /var/lib/docker/containers/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /var/run
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /var/run
+    Type: bind
+  - Destination: /sys
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /sys
+    Type: bind
+  - Destination: /var/lib/docker
+    Mode: ro
+    Propagation: rslave
+    RW: false
+    Source: /var/lib/docker
+    Type: bind
+  - Destination: /dev/disk
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /dev/disk
+    Type: bind
+  - Destination: /rootfs
+    Mode: ro
+    Propagation: rslave
+    RW: false
+    Source: /
+    Type: bind
+  Name: /observability-clientside-cadvisor-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-cadvisor-1
+        - cadvisor
+        DNSNames:
+        - observability-clientside-cadvisor-1
+        - cadvisor
+        - 4ee4407a436f
+        DriverOpts: null
+        EndpointID: 86caadbba242a7981955e0828caf5cb731cf136bccff6c1ec3f2bca75624e24e
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.4
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:04
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      8080/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '8080'
+      - HostIp: '::'
+        HostPort: '8080'
+    SandboxID: 3cac951b2c5c173d9e78d864996bc47a91068e6ab283fc8b58b43c5d1d7a4042
+    SandboxKey: /var/run/docker/netns/3cac951b2c5c
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /usr/bin/cadvisor
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    Health:
+      FailingStreak: 0
+      Log:
+      - End: '2024-08-30T22:13:33.023628824+01:00'
+        ExitCode: 0
+        Output: ''
+        Start: '2024-08-30T22:13:32.976900251+01:00'
+      - End: '2024-08-30T22:14:03.060084754+01:00'
+        ExitCode: 0
+        Output: ''
+        Start: '2024-08-30T22:14:03.02437763+01:00'
+      - End: '2024-08-30T22:14:33.089169783+01:00'
+        ExitCode: 0
+        Output: ''
+        Start: '2024-08-30T22:14:33.060387727+01:00'
+      - End: '2024-08-30T22:15:03.127924131+01:00'
+        ExitCode: 0
+        Output: ''
+        Start: '2024-08-30T22:15:03.089934731+01:00'
+      - End: '2024-08-30T22:15:33.164906735+01:00'
+        ExitCode: 0
+        Output: ''
+        Start: '2024-08-30T22:15:33.128230975+01:00'
+      Status: healthy
+    OOMKilled: false
+    Paused: false
+    Pid: 214887
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.692817864Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - --path.procfs=/host/proc
+  - --path.rootfs=/rootfs
+  - --path.sysfs=/host/sys
+  - --collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($|/)
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - --path.procfs=/host/proc
+    - --path.rootfs=/rootfs
+    - --path.sysfs=/host/sys
+    - --collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($|/)
+    Domainname: ''
+    Entrypoint:
+    - /bin/node_exporter
+    Env:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ExposedPorts:
+      '9100': {}
+      9100/tcp: {}
+    Hostname: e5ea3792a6cd
+    Image: prom/node-exporter:latest
+    Labels:
+      com.docker.compose.config-hash: 7d5dcc34a42c4f05a6cd1dee5557f039030e8d5c726360644bce193680decb10
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:71dc9668b154bd072420bf69f59140ceeac04b88cf300bfa24053eb02a04f169
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: node-exporter
+      com.docker.compose.version: 2.29.1
+      maintainer: The Prometheus Authors <prometheus-developers@googlegroups.com>
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: nobody
+    Volumes: null
+    WorkingDir: ''
+  Created: '2024-08-30T14:16:06.063970424Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e-init/diff:/var/lib/docker/overlay2/7b2b21a84479e6b92c10c0f38d79ebfbb6ca094d550455f16bda79843666c2c7/diff:/var/lib/docker/overlay2/22601ccca500167f38b0f7a38778cf4f661f766d7b17d15c4412941d75dbe349/diff:/var/lib/docker/overlay2/89f9fbebfdf95c14dfd483dbee9b3fcbf12e7414b8fb894c23808321b99ff0bc/diff
+      MergedDir: /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/merged
+      UpperDir: /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/diff
+      WorkDir: /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /proc:/host/proc:ro
+    - /sys:/host/sys:ro
+    - /:/rootfs:ro
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      9100/tcp:
+      - HostIp: ''
+        HostPort: '9100'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93/hostname
+  HostsPath: /var/lib/docker/containers/e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93/hosts
+  Id: e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93
+  Image: sha256:71dc9668b154bd072420bf69f59140ceeac04b88cf300bfa24053eb02a04f169
+  LogPath: /var/lib/docker/containers/e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93/e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /rootfs
+    Mode: ro
+    Propagation: rslave
+    RW: false
+    Source: /
+    Type: bind
+  - Destination: /host/proc
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /proc
+    Type: bind
+  - Destination: /host/sys
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /sys
+    Type: bind
+  Name: /node-exporter
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - node-exporter
+        - node-exporter
+        DNSNames:
+        - node-exporter
+        - e5ea3792a6cd
+        DriverOpts: null
+        EndpointID: 5f2e5d2e0a55ea53629b30b98117a906159cb4c89afe991da729c246116c1470
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.8
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:08
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      9100/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '9100'
+      - HostIp: '::'
+        HostPort: '9100'
+    SandboxID: 715c7883173d3e86ed8ebb1aac2b899c95ce93077800f297786b960ac9c40ea3
+    SandboxKey: /var/run/docker/netns/715c7883173d
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /bin/node_exporter
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/e5ea3792a6cdd7555c4e32b2d7e6848f8ec285263c240cc2661125f0481b7a93/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 215193
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.819998879Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - --config=/etc/otel-collector-config.yml
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - --config=/etc/otel-collector-config.yml
+    Domainname: ''
+    Entrypoint:
+    - /otelcol-contrib
+    Env:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    ExposedPorts:
+      12345/tcp: {}
+      12348/tcp: {}
+      4317/tcp: {}
+      55678/tcp: {}
+      55679/tcp: {}
+      6832/tcp: {}
+    Hostname: aa00736a7f84
+    Image: otel/opentelemetry-collector-contrib:0.99.0
+    Labels:
+      com.docker.compose.config-hash: 54cdc13aeb02f792d82972d9c91882c1ada9951ae110978d19217960f1689ad8
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:676745b2349fc244b04676d2b43114db918361e0161875dd4917264981da7280
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: opentelemetry-collector
+      com.docker.compose.version: 2.29.1
+      org.opencontainers.image.created: '2024-04-23T00:03:29Z'
+      org.opencontainers.image.licenses: Apache-2.0
+      org.opencontainers.image.name: opentelemetry-collector-releases
+      org.opencontainers.image.revision: d2c96926b8b02e370d420df625dbc47cfbafa1cc
+      org.opencontainers.image.source: https://github.com/open-telemetry/opentelemetry-collector-releases
+      org.opencontainers.image.version: 0.99.0
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: '10001'
+    Volumes: null
+    WorkingDir: /
+  Created: '2024-08-30T14:16:06.063683402Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac-init/diff:/var/lib/docker/overlay2/fc237b4d1a26c1c756aea2462376652cf58dc8bbb4a96c488be01dacafab9660/diff:/var/lib/docker/overlay2/b1ab346af9cd55baabc4f1cabdb8c25a06ddf3a959bf7dfff1ef5a8634626997/diff:/var/lib/docker/overlay2/c8f9f1f93139c4e9ff621fe683fa17c6b7e313470b09a524060b469f215c103d/diff
+      MergedDir: /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/merged
+      UpperDir: /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/diff
+      WorkDir: /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/config/otel/otel.yml:/etc/otel-collector-config.yml:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts:
+    - tempo.local:3.248.237.149
+    - otel-grpc.local:3.248.237.149
+    - mimir.local:3.248.237.149
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      12345/tcp:
+      - HostIp: ''
+        HostPort: '12347'
+      12348/tcp:
+      - HostIp: ''
+        HostPort: '12348'
+      55679/tcp:
+      - HostIp: ''
+        HostPort: '55679'
+      6832/tcp:
+      - HostIp: ''
+        HostPort: '6832'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a/hostname
+  HostsPath: /var/lib/docker/containers/aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a/hosts
+  Id: aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a
+  Image: sha256:676745b2349fc244b04676d2b43114db918361e0161875dd4917264981da7280
+  LogPath: /var/lib/docker/containers/aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a/aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /etc/otel-collector-config.yml
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/otel/otel.yml
+    Type: bind
+  Name: /observability-clientside-opentelemetry-collector-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-opentelemetry-collector-1
+        - opentelemetry-collector
+        DNSNames:
+        - observability-clientside-opentelemetry-collector-1
+        - opentelemetry-collector
+        - aa00736a7f84
+        DriverOpts: null
+        EndpointID: b17529217f0fae8796bc6865ef51787b4e531146ed814d33984337ba5ca84181
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.5
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:05
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      12345/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '12347'
+      - HostIp: '::'
+        HostPort: '12347'
+      12348/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '12348'
+      - HostIp: '::'
+        HostPort: '12348'
+      4317/tcp: null
+      55678/tcp: null
+      55679/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '55679'
+      - HostIp: '::'
+        HostPort: '55679'
+      6832/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '6832'
+      - HostIp: '::'
+        HostPort: '6832'
+    SandboxID: a13490476605606ab77522fa73a8d45f75d2b675105330ed5cf91efaec603821
+    SandboxKey: /var/run/docker/netns/a13490476605
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /otelcol-contrib
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/aa00736a7f84300e3c186e37021e29a31e342f5ed4bfd33eef7616dc6d897b4a/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 215064
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.757185686Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args:
+  - bash
+  - -c
+  - /smoke/request-script.sh
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd:
+    - bash
+    - -c
+    - /smoke/request-script.sh
+    Domainname: ''
+    Entrypoint:
+    - /usr/bin/entrypoint.sh
+    Env:
+    - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    Hostname: e6837043d72a
+    Image: caqueiroz/smoke:1.0
+    Labels:
+      com.docker.compose.config-hash: 9e159d2a8b12ad81a5dac4b7274e405a500596a47b70b4ec96ce9f68c55d96ef
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:82d6227c24ba3ef5a55fdfc80754abd19694eb6113a0ab7d2d70b0de68ffe7ce
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: smoke
+      com.docker.compose.version: 2.29.1
+      org.opencontainers.image.ref.name: ubuntu
+      org.opencontainers.image.version: '20.04'
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: ''
+    Volumes: null
+    WorkingDir: ''
+  Created: '2024-08-30T14:16:06.063579566Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8-init/diff:/var/lib/docker/overlay2/09f156dd6d82eb0fb34042d1dd05e82f2d14615f12e62820adb983bdc7b3443c/diff:/var/lib/docker/overlay2/ebde7f2bda05167d9f653c8893da7a8b42a9e2aaf9b44deef5c6f3d6e34fc40b/diff:/var/lib/docker/overlay2/01502d1bc31b61e2a2b0563b01d5e4187e968011ab179e98e10746e2acbeb01f/diff:/var/lib/docker/overlay2/46743bf0403ea9d86b9a703135fff26c3d358cba7b22d3b1de339873cc31d292/diff:/var/lib/docker/overlay2/b8a79c0a49d0b6862afcec6e512411fd5d49a670b3863c00d92ea6dc0490fbf7/diff:/var/lib/docker/overlay2/e965104b60919a93de49f24b515dc61c484dff3a24c2f413ba60271a9c31f875/diff
+      MergedDir: /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/merged
+      UpperDir: /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/diff
+      WorkDir: /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/scripts/request-script.sh:/smoke/request-script.sh:rw
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts: []
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings: {}
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1/hostname
+  HostsPath: /var/lib/docker/containers/e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1/hosts
+  Id: e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1
+  Image: sha256:82d6227c24ba3ef5a55fdfc80754abd19694eb6113a0ab7d2d70b0de68ffe7ce
+  LogPath: /var/lib/docker/containers/e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1/e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /smoke/request-script.sh
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/scripts/request-script.sh
+    Type: bind
+  Name: /observability-clientside-smoke-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-smoke-1
+        - smoke
+        DNSNames:
+        - observability-clientside-smoke-1
+        - smoke
+        - e6837043d72a
+        DriverOpts: null
+        EndpointID: 831acd401b946657fb2ca9d7d9ef22f32522e05b8ef06f886f1e600e170f3d3b
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.6
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:06
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports: {}
+    SandboxID: 3fb79cfa99ba638b7bfd949642e4c874265579c902321788d68215d96b404a2d
+    SandboxKey: /var/run/docker/netns/3fb79cfa99ba
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /usr/bin/entrypoint.sh
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/e6837043d72afe3e4853502a18f16713db131bc35e57bee58eecb25916271cc1/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 214902
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.698672946Z'
+    Status: running
+- AppArmorProfile: docker-default
+  Args: []
+  Config:
+    AttachStderr: true
+    AttachStdin: false
+    AttachStdout: true
+    Cmd: null
+    Domainname: ''
+    Entrypoint:
+    - /run.sh
+    Env:
+    - GF_LOG_MODE=console
+    - GF_LOG_LEVEL=debug
+    - GF_AUTH_ANONYMOUS_ENABLED=true
+    - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    - GF_USERS_DEFAULT_THEME=light
+    - PATH=/usr/share/grafana/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+    - GF_PATHS_DATA=/var/lib/grafana
+    - GF_PATHS_HOME=/usr/share/grafana
+    - GF_PATHS_LOGS=/var/log/grafana
+    - GF_PATHS_PLUGINS=/var/lib/grafana/plugins
+    - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+    ExposedPorts:
+      3000/tcp: {}
+    Hostname: 1f0e4ee10e24
+    Image: grafana/grafana:latest
+    Labels:
+      com.docker.compose.config-hash: d8ea48d4897557e26f4eddf1fe9e21ed34b544bb39207778cd015c84a51efc1e
+      com.docker.compose.container-number: '1'
+      com.docker.compose.depends_on: ''
+      com.docker.compose.image: sha256:de903bc9ce7c4e27fd447a72849506b3bcebd10a87aab770696442502152bfb5
+      com.docker.compose.oneoff: 'False'
+      com.docker.compose.project: observability-clientside
+      com.docker.compose.project.config_files: /home/cqueiroz/gitrepo/observability-clientside/docker-compose.yml
+      com.docker.compose.project.working_dir: /home/cqueiroz/gitrepo/observability-clientside
+      com.docker.compose.service: grafana
+      com.docker.compose.version: 2.29.1
+      maintainer: Grafana Labs <hello@grafana.com>
+    OnBuild: null
+    OpenStdin: false
+    StdinOnce: false
+    Tty: false
+    User: '472'
+    Volumes: null
+    WorkingDir: /usr/share/grafana
+  Created: '2024-08-30T14:16:06.063550333Z'
+  Driver: overlay2
+  ExecIDs: null
+  GraphDriver:
+    Data:
+      LowerDir: /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a-init/diff:/var/lib/docker/overlay2/1dc2655b35b0f48d3fb5796447b64469ec99b3f1c9a722ce534580350e56aa8b/diff:/var/lib/docker/overlay2/f3f99724bff91acaf3c65e4e6f255600b35e80f0406fcb9fd5b93fcc881b6100/diff:/var/lib/docker/overlay2/9dbfdc94068fe06ea3796a301c830569169795b475bcbab7d99452649f8dcb5e/diff:/var/lib/docker/overlay2/3e3cc9732ff7420cb68da59f37d98885063774467123e35ad7dbd625e0d4c6f8/diff:/var/lib/docker/overlay2/bdc4a479c8e16bbb38bccc9037de6e48c031d0a481a6f75314160c96ed59bc96/diff:/var/lib/docker/overlay2/fd836a7b2d217f15d66b13a9ee460d5a131f8338604b1c4325c5bca6819e5981/diff:/var/lib/docker/overlay2/102c65f779e4cfcb4bc976381d15cfeb8be17fd651b1015b4dfd6113374f45df/diff:/var/lib/docker/overlay2/34ea41ff9db4ee6ab82e960b32cb64c06547e80c0d08c74932c7754e5e7cf10a/diff:/var/lib/docker/overlay2/589afab24077cf54eb9cc7dac6aee84a1ba36caf328dfc12d94999ad13ddb001/diff:/var/lib/docker/overlay2/12bf7a00e73b287fa51aa6849d08d6c8963ebb4713865e4c9dd2e8c68361d5e9/diff
+      MergedDir: /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/merged
+      UpperDir: /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/diff
+      WorkDir: /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/work
+    Name: overlay2
+  HostConfig:
+    AutoRemove: false
+    Binds:
+    - /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_data_daddy.json:/var/lib/grafana/dashboards/observability_multitenancy_data_daddy.json:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/dashboards/node_exporter.json:/var/lib/grafana/dashboards/node_exporter.json:ro
+    - /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
+    - /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_data_daddy.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources_daddy.yaml:ro
+    - /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_paula_vadinho_corp.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources_paula_vadinho_corp.yaml:ro
+    - /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_pepecorp.json:/var/lib/grafana/dashboards/observability_multitenancy_pepecorp.json:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_paula_vadinho_corp.json:/var/lib/grafana/dashboards/observability_multitenancy_paula_vadinho_corp.json:rw
+    - /home/cqueiroz/gitrepo/observability-clientside/dashboards/cadvisor_insights.json:/var/lib/grafana/dashboards/cadvisor_insights.json:ro
+    - /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_pepecorp.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources_pepecorp.yaml:ro
+    BlkioDeviceReadBps: null
+    BlkioDeviceReadIOps: null
+    BlkioDeviceWriteBps: null
+    BlkioDeviceWriteIOps: null
+    BlkioWeight: 0
+    BlkioWeightDevice: null
+    CapAdd: null
+    CapDrop: null
+    Cgroup: ''
+    CgroupParent: ''
+    CgroupnsMode: private
+    ConsoleSize:
+    - 0
+    - 0
+    ContainerIDFile: ''
+    CpuCount: 0
+    CpuPercent: 0
+    CpuPeriod: 0
+    CpuQuota: 0
+    CpuRealtimePeriod: 0
+    CpuRealtimeRuntime: 0
+    CpuShares: 0
+    CpusetCpus: ''
+    CpusetMems: ''
+    DeviceCgroupRules: null
+    DeviceRequests: null
+    Devices: null
+    Dns: null
+    DnsOptions: null
+    DnsSearch: null
+    ExtraHosts:
+    - mimir.local:3.248.237.149
+    - tempo.local:3.248.237.149
+    - loki.local:3.248.237.149
+    GroupAdd: null
+    IOMaximumBandwidth: 0
+    IOMaximumIOps: 0
+    IpcMode: private
+    Isolation: ''
+    Links: null
+    LogConfig:
+      Config: {}
+      Type: json-file
+    MaskedPaths:
+    - /proc/asound
+    - /proc/acpi
+    - /proc/kcore
+    - /proc/keys
+    - /proc/latency_stats
+    - /proc/timer_list
+    - /proc/timer_stats
+    - /proc/sched_debug
+    - /proc/scsi
+    - /sys/firmware
+    - /sys/devices/virtual/powercap
+    Memory: 0
+    MemoryReservation: 0
+    MemorySwap: 0
+    MemorySwappiness: null
+    NanoCpus: 0
+    NetworkMode: observability-clientside_default
+    OomKillDisable: null
+    OomScoreAdj: 0
+    PidMode: ''
+    PidsLimit: null
+    PortBindings:
+      3000/tcp:
+      - HostIp: ''
+        HostPort: '9000'
+    Privileged: false
+    PublishAllPorts: false
+    ReadonlyPaths:
+    - /proc/bus
+    - /proc/fs
+    - /proc/irq
+    - /proc/sys
+    - /proc/sysrq-trigger
+    ReadonlyRootfs: false
+    RestartPolicy:
+      MaximumRetryCount: 0
+      Name: 'no'
+    Runtime: runc
+    SecurityOpt: null
+    ShmSize: 67108864
+    UTSMode: ''
+    Ulimits: null
+    UsernsMode: ''
+    VolumeDriver: ''
+    VolumesFrom: null
+  HostnamePath: /var/lib/docker/containers/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8/hostname
+  HostsPath: /var/lib/docker/containers/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8/hosts
+  Id: 1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8
+  Image: sha256:de903bc9ce7c4e27fd447a72849506b3bcebd10a87aab770696442502152bfb5
+  LogPath: /var/lib/docker/containers/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8-json.log
+  MountLabel: ''
+  Mounts:
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_daddy.yaml
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_data_daddy.yaml
+    Type: bind
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_paula_vadinho_corp.yaml
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_paula_vadinho_corp.yaml
+    Type: bind
+  - Destination: /var/lib/grafana/dashboards/observability_multitenancy_data_daddy.json
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_data_daddy.json
+    Type: bind
+  - Destination: /etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-dashboards.yaml
+    Type: bind
+  - Destination: /var/lib/grafana/dashboards/observability_multitenancy_pepecorp.json
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_pepecorp.json
+    Type: bind
+  - Destination: /var/lib/grafana/dashboards/observability_multitenancy_paula_vadinho_corp.json
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_paula_vadinho_corp.json
+    Type: bind
+  - Destination: /var/lib/grafana/dashboards/cadvisor_insights.json
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/cadvisor_insights.json
+    Type: bind
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_pepecorp.yaml
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_pepecorp.yaml
+    Type: bind
+  - Destination: /var/lib/grafana/dashboards/node_exporter.json
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/node_exporter.json
+    Type: bind
+  Name: /observability-clientside-grafana-1
+  NetworkSettings:
+    Bridge: ''
+    EndpointID: ''
+    Gateway: ''
+    GlobalIPv6Address: ''
+    GlobalIPv6PrefixLen: 0
+    HairpinMode: false
+    IPAddress: ''
+    IPPrefixLen: 0
+    IPv6Gateway: ''
+    LinkLocalIPv6Address: ''
+    LinkLocalIPv6PrefixLen: 0
+    MacAddress: ''
+    Networks:
+      observability-clientside_default:
+        Aliases:
+        - observability-clientside-grafana-1
+        - grafana
+        DNSNames:
+        - observability-clientside-grafana-1
+        - grafana
+        - 1f0e4ee10e24
+        DriverOpts: null
+        EndpointID: 370382eacf6ef137b8e542b40776b7485bbb9d9cfe5cdf24242c0c185fbff751
+        Gateway: 172.18.0.1
+        GlobalIPv6Address: ''
+        GlobalIPv6PrefixLen: 0
+        IPAMConfig: null
+        IPAddress: 172.18.0.2
+        IPPrefixLen: 16
+        IPv6Gateway: ''
+        Links: null
+        MacAddress: 02:42:ac:12:00:02
+        NetworkID: 453943a507a6c14261a4dfa1b51bb30020eee3eb091a7d135391d8ffdfddc081
+    Ports:
+      3000/tcp:
+      - HostIp: 0.0.0.0
+        HostPort: '9000'
+      - HostIp: '::'
+        HostPort: '9000'
+    SandboxID: c45caa5a949f7b2d10150578804a691db0d28aeb507fcbaa7c290932b1e560a2
+    SandboxKey: /var/run/docker/netns/c45caa5a949f
+    SecondaryIPAddresses: null
+    SecondaryIPv6Addresses: null
+  Path: /run.sh
+  Platform: linux
+  ProcessLabel: ''
+  ResolvConfPath: /var/lib/docker/containers/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8/resolv.conf
+  RestartCount: 0
+  State:
+    Dead: false
+    Error: ''
+    ExitCode: 0
+    FinishedAt: '0001-01-01T00:00:00Z'
+    OOMKilled: false
+    Paused: false
+    Pid: 214888
+    Restarting: false
+    Running: true
+    StartedAt: '2024-08-30T14:18:01.590954664Z'
+    Status: running
+filesystems:
+- /dev/mapper/vgubuntu-root ext4      230G  158G   61G  73% /
+- efivarfs                  efivarfs  246K  135K  106K  57% /sys/firmware/efi/efivars
+- /dev/nvme0n1p2            ext4      1.7G  450M  1.1G  30% /boot
+- /dev/nvme0n1p1            vfat      511M  6.1M  505M   2% /boot/efi
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/merged
+- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/merged
+hostname: UX-080
+network_info:
+- addr_info:
+  - family: inet
+    label: lo
+    local: 127.0.0.1
+    preferred_life_time: 4294967295
+    prefixlen: 8
+    scope: host
+    valid_life_time: 4294967295
+  - family: inet6
+    local: ::1
+    preferred_life_time: 4294967295
+    prefixlen: 128
+    scope: host
+    valid_life_time: 4294967295
+  address: 00:00:00:00:00:00
+  broadcast: 00:00:00:00:00:00
+  flags:
+  - LOOPBACK
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 1
+  ifname: lo
+  link_type: loopback
+  mtu: 65536
+  operstate: UNKNOWN
+  qdisc: noqueue
+  txqlen: 1000
+- addr_info: []
+  address: 7c:57:58:0f:e5:2d
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - NO-CARRIER
+  - BROADCAST
+  - MULTICAST
+  - UP
+  group: default
+  ifindex: 2
+  ifname: enp3s0
+  link_type: ether
+  mtu: 1500
+  operstate: DOWN
+  qdisc: fq_codel
+  txqlen: 1000
+- addr_info:
+  - broadcast: 192.168.1.255
+    dynamic: true
+    family: inet
+    label: wlp0s20f3
+    local: 192.168.1.159
+    noprefixroute: true
+    preferred_life_time: 72087
+    prefixlen: 24
+    scope: global
+    valid_life_time: 72087
+  - dynamic: true
+    family: inet6
+    local: 2a00:23c6:2986:cd01:6663:6c19:79b0:150
+    preferred_life_time: 103
+    prefixlen: 64
+    scope: global
+    temporary: true
+    valid_life_time: 283
+  - dynamic: true
+    family: inet6
+    local: 2a00:23c6:2986:cd01:332b:50b1:f7b2:11c9
+    mngtmpaddr: true
+    noprefixroute: true
+    preferred_life_time: 103
+    prefixlen: 64
+    scope: global
+    valid_life_time: 283
+  - family: inet6
+    local: fe80::f545:6eda:fd6d:38cd
+    noprefixroute: true
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 74:04:f1:17:cc:6c
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 3
+  ifname: wlp0s20f3
+  link_type: ether
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+  txqlen: 1000
+- addr_info:
+  - broadcast: 192.168.49.255
+    family: inet
+    label: br-8153de54ab11
+    local: 192.168.49.1
+    preferred_life_time: 4294967295
+    prefixlen: 24
+    scope: global
+    valid_life_time: 4294967295
+  address: 02:42:27:30:ab:9d
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - NO-CARRIER
+  - BROADCAST
+  - MULTICAST
+  - UP
+  group: default
+  ifindex: 4
+  ifname: br-8153de54ab11
+  link_type: ether
+  mtu: 1500
+  operstate: DOWN
+  qdisc: noqueue
+- addr_info:
+  - broadcast: 172.17.255.255
+    family: inet
+    label: docker0
+    local: 172.17.0.1
+    preferred_life_time: 4294967295
+    prefixlen: 16
+    scope: global
+    valid_life_time: 4294967295
+  address: 02:42:0f:a0:ad:47
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - NO-CARRIER
+  - BROADCAST
+  - MULTICAST
+  - UP
+  group: default
+  ifindex: 5
+  ifname: docker0
+  link_type: ether
+  mtu: 1500
+  operstate: DOWN
+  qdisc: noqueue
+- addr_info:
+  - broadcast: 100.111.223.255
+    family: inet
+    label: vpn0
+    local: 100.111.223.227
+    noprefixroute: true
+    preferred_life_time: 4294967295
+    prefixlen: 24
+    scope: global
+    valid_life_time: 4294967295
+  - family: inet6
+    local: fe80::950e:e224:a9e:6b31
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    stable-privacy: true
+    valid_life_time: 4294967295
+  flags:
+  - POINTOPOINT
+  - MULTICAST
+  - NOARP
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 6
+  ifname: vpn0
+  link_type: none
+  mtu: 1300
+  operstate: UP
+  qdisc: fq_codel
+  txqlen: 500
+- addr_info:
+  - broadcast: 172.18.255.255
+    family: inet
+    label: br-453943a507a6
+    local: 172.18.0.1
+    preferred_life_time: 4294967295
+    prefixlen: 16
+    scope: global
+    valid_life_time: 4294967295
+  - family: inet6
+    local: fe80::42:deff:fe36:6ad0
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 02:42:de:36:6a:d0
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 7
+  ifname: br-453943a507a6
+  link_type: ether
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::58a8:d8ff:fead:fc9b
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 5a:a8:d8:ad:fc:9b
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 9
+  ifname: veth5aff3a0
+  link_index: 8
+  link_netnsid: 0
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::a87e:e6ff:fe41:4b7b
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: aa:7e:e6:41:4b:7b
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 11
+  ifname: vethad79720
+  link_index: 10
+  link_netnsid: 3
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::6cdf:3aff:fed3:7feb
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 6e:df:3a:d3:7f:eb
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 13
+  ifname: vetha91af22
+  link_index: 12
+  link_netnsid: 1
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::380c:e0ff:fe85:f037
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 3a:0c:e0:85:f0:37
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 15
+  ifname: veth63e0120
+  link_index: 14
+  link_netnsid: 5
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::105e:9eff:fe2e:c630
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 12:5e:9e:2e:c6:30
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 17
+  ifname: veth545ea0b
+  link_index: 16
+  link_netnsid: 2
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::14dc:9fff:fe00:c301
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: 16:dc:9f:00:c3:01
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 19
+  ifname: vethdf70d62
+  link_index: 18
+  link_netnsid: 4
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::b04b:feff:fe5a:add5
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: b2:4b:fe:5a:ad:d5
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 21
+  ifname: veth7df1c91
+  link_index: 20
+  link_netnsid: 7
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::e024:b6ff:fe6d:7db0
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: e2:24:b6:6d:7d:b0
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 23
+  ifname: veth7581784
+  link_index: 22
+  link_netnsid: 6
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+- addr_info:
+  - family: inet6
+    local: fe80::a8e9:67ff:fec1:6255
+    preferred_life_time: 4294967295
+    prefixlen: 64
+    scope: link
+    valid_life_time: 4294967295
+  address: aa:e9:67:c1:62:55
+  broadcast: ff:ff:ff:ff:ff:ff
+  flags:
+  - BROADCAST
+  - MULTICAST
+  - UP
+  - LOWER_UP
+  group: default
+  ifindex: 25
+  ifname: veth50bf06f
+  link_index: 24
+  link_netnsid: 8
+  link_type: ether
+  master: br-453943a507a6
+  mtu: 1500
+  operstate: UP
+  qdisc: noqueue
+os_info: Ubuntu 22.04.4 LTS
+services:
+- '  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION'
+- '  accounts-daemon.service       loaded active running Accounts Service'
+- '  acpid.service                 loaded active running ACPI event daemon'
+- '  avahi-daemon.service          loaded active running Avahi mDNS/DNS-SD Stack'
+- '  bluetooth.service             loaded active running Bluetooth service'
+- '  colord.service                loaded active running Manage, Install and Generate
+  Color Profiles'
+- '  containerd.service            loaded active running containerd container runtime'
+- '  cron.service                  loaded active running Regular background program
+  processing daemon'
+- '  cups-browsed.service          loaded active running Make remote CUPS printers
+  available locally'
+- '  cups.service                  loaded active running CUPS Scheduler'
+- '  dbus.service                  loaded active running D-Bus System Message Bus'
+- '  docker.service                loaded active running Docker Application Container
+  Engine'
+- '  gdm.service                   loaded active running GNOME Display Manager'
+- '  irqbalance.service            loaded active running irqbalance daemon'
+- '  kerneloops.service            loaded active running Tool to automatically collect
+  and submit kernel crash signatures'
+- '  ModemManager.service          loaded active running Modem Manager'
+- '  networkd-dispatcher.service   loaded active running Dispatcher daemon for systemd-networkd'
+- '  NetworkManager.service        loaded active running Network Manager'
+- '  packagekit.service            loaded active running PackageKit Daemon'
+- '  polkit.service                loaded active running Authorization Manager'
+- '  power-profiles-daemon.service loaded active running Power Profiles daemon'
+- '  rsyslog.service               loaded active running System Logging Service'
+- '  rtkit-daemon.service          loaded active running RealtimeKit Scheduling Policy
+  Service'
+- '  sentinelone.service           loaded active running Monitor SentinelOne Agent'
+- '  snapd.service                 loaded active running Snap Daemon'
+- '  switcheroo-control.service    loaded active running Switcheroo Control Proxy
+  service'
+- '  systemd-journald.service      loaded active running Journal Service'
+- '  systemd-logind.service        loaded active running User Login Management'
+- '  systemd-oomd.service          loaded active running Userspace Out-Of-Memory (OOM)
+  Killer'
+- '  systemd-resolved.service      loaded active running Network Name Resolution'
+- '  systemd-timesyncd.service     loaded active running Network Time Synchronization'
+- '  systemd-udevd.service         loaded active running Rule-based Manager for Device
+  Events and Files'
+- '  thermald.service              loaded active running Thermal Daemon Service'
+- '  udisks2.service               loaded active running Disk Manager'
+- '  unattended-upgrades.service   loaded active running Unattended Upgrades Shutdown'
+- '  upower.service                loaded active running Daemon for power management'
+- '  user@1001.service             loaded active running User Manager for UID 1001'
+- '  wpa_supplicant.service        loaded active running WPA supplicant'
+- ''
+- LOAD   = Reflects whether the unit definition was properly loaded.
+- ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+- SUB    = The low-level unit activation state, values depend on unit type.
+- 37 loaded units listed.
