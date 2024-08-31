@@ -84,6 +84,18 @@ def create_db_schema(conn):
     )
     ''')
 
+    # Docker Services
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS DockerServices (
+        server_name TEXT,
+        container_id TEXT,
+        container_port TEXT,
+        host_port TEXT,
+        proto TEXT,
+        FOREIGN KEY (container_id) REFERENCES DockerContainers(container_id)
+    )
+    ''')
+
     conn.commit()
 
 
@@ -140,7 +152,23 @@ def insert_data(conn, yaml_file):
         INSERT INTO DockerConnections (server_name, container_id, pid, connections)
         VALUES (?, ?, ?, ?)
         ''', (data['hostname'], docker_conn['container_id'],  docker_conn['pid'],  ip_connections ))
-    
+
+# Insert docker services
+    for docker_svc in data['docker_containers']:
+        svc_port_bindings = []
+        container_id = docker_svc['Config']['Hostname']
+        portbindings = docker_svc['HostConfig']['PortBindings']
+        for ct_port, hst_pt in portbindings.items():
+            container_port, proto = ct_port.split('/')
+            host_port = hst_pt[0] #.get('HostPort')
+            print(host_port)
+            cursor.execute('''
+            INSERT INTO DockerServices (server_name, container_id, container_port, host_port, proto)
+            VALUES (?, ?, ?, ?, ?)
+            ''', (data['hostname'], container_id,  container_port,  host_port['HostPort'], proto ))
+
+
+
     # Insert into NetworkInterfaces table
     for iface in data['network_info']:
 #        for ifopts in iface['addr_info']:
