@@ -96,8 +96,19 @@ def create_db_schema(conn):
     )
     ''')
 
-    conn.commit()
+    # Host Connections
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS HostConnections (
+        server_id INTEGER,
+        pid TEXT,
+        ip_address TEXT,
+        host_port TEXT,
+        proto TEXT,
+        FOREIGN KEY (server_id) REFERENCES Servers(id)
+    )
+    ''')
 
+    conn.commit()
 
 def format_ip_info(addr_info):
     ip_entries = []
@@ -168,6 +179,16 @@ def insert_data(conn, yaml_file):
             ''', (data['hostname'], container_id,  container_port,  host_port['HostPort'], proto ))
 
 
+# Insert Host Connections
+    host_conn = data['host_connections']
+    for pid_key, conn_values in host_conn.items():
+        print(pid_key)
+        print(conn_values['ip'])
+        cursor.execute('''
+        INSERT INTO HostConnections (server_id, pid, ip_address, host_port, proto)
+        VALUES (?, ?, ?, ?, ?)
+        ''', (server_id, pid_key, conn_values['ip'], conn_values['port'], conn_values['protocol'] ))
+
 
     # Insert into NetworkInterfaces table
     for iface in data['network_info']:
@@ -198,11 +219,11 @@ def insert_data(conn, yaml_file):
         container_id = container['Config']['Hostname']
         container_image = container['Config']['Image']
 
-
         cursor.execute('''
         INSERT INTO DockerContainers (server_id, container_id, image, name, ip)
         VALUES (?, ?, ?, ?, ?)
         ''', (server_id, container_id, container_image, container_name, docker_ip))
+
 
     # Insert into Filesystems table
     for fs in data['filesystems']:
