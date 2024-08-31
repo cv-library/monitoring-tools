@@ -11,10 +11,42 @@ def get_container_pid(container_id):
         print(f"Error getting PID for container {container_id}: {e}")
         return None
 
-def get_established_connections(pid):
-    connections = set()  # Use a set to store unique IP addresses
+def gather_connections_host():
+#    netstat_output = []    
+    netstat_output = subprocess.check_output(['netstat', '-atunp']).decode('utf-8').strip()
+    ip_address=""
+    port=""
+    protocol=""
+    pid=""
+    pid_proc=""
+    connections_host = {}
+    try:        
+        for line in netstat_output.splitlines()[2:]:
+            parts = line.split()
+            if len(parts) >=6 and parts[5] == 'ESTABLISHED':
+                ip_address, port = parts[4].rsplit(':', 1)
+                pid_proc = parts[6]
+                pid = parts[6]
+                protocol = parts[0]
+            pid = pid_proc.split('/')[0]
+            if ip_address and protocol and port and pid:
+                connections_host[pid] = {
+                    'ip': ip_address,
+                    'port': port,
+                    'protocol': protocol
+                }
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+        return None
     
-    # Use docker exec to run the netstat command within the container
+    return connections_host
+
+
+
+def get_established_connections_docker(pid):
+    connections_docker = set()
+    connections_host = set()
+    
     try:
 #        pid = subprocess.check_output(['docker', 'inspect', '--format', '{{.State.Pid}}', container_id])
 #        pid = pid.decode('utf-8').strip()
@@ -25,19 +57,18 @@ def get_established_connections(pid):
 #            text=True
 #        )
         
-        # Process the output, skipping the headers
         for line in output.splitlines()[2:]:  # Skip headers
             parts = line.split()
             if parts[5] == 'ESTABLISHED':  # Check if the connection is established
                 ip_address = parts[4].split(':')[0]  # Extract IP address (ignore port)
-                connections.add(ip_address)
+                connections_docker.add(ip_address)
                 
     except subprocess.CalledProcessError as e:
         print(f"Error retrieving connections for container {container_id}: {e}")
     
-    return list(connections)  # Convert set to list before returning
+    return list(connections_docker)  # Convert set to list before returning
 
-def gather_container_connections():
+def gather_container_connections_docker():
     container_connections = []
     
     # Get a list of running containers
@@ -45,7 +76,7 @@ def gather_container_connections():
     
     for container_id in container_ids:
         pid=get_container_pid(container_id)
-        connections = get_established_connections(pid)
+        connections = get_established_connections_docker(pid)
         container_info = {
             "container_id": container_id,
             "connections": connections,
@@ -85,7 +116,9 @@ def gather_system_info():
         "services": get_services().splitlines(),
         "docker_containers": [yaml.safe_load(line) for line in get_docker_containers().splitlines()],
         "filesystems": get_filesystems().splitlines()[1:],  # Skip header
-        "docker_connections": gather_container_connections()
+        "docker_connections": gather_container_connections_docker(),
+        "host_connections": gather_connections_host()
+
     }
     return system_info
 

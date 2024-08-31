@@ -1,8 +1,8 @@
 docker_connections:
 - connections:
   - 172.18.0.7
-  - 172.18.0.6
   - 172.18.0.5
+  - 172.18.0.6
   container_id: 2e31aab0d5ab
   pid: '215253'
 - connections:
@@ -16,12 +16,12 @@ docker_connections:
   container_id: a8f592e12b7a
   pid: '215254'
 - connections:
-  - 172.18.0.9
-  - 3.248.237.149
-  - 172.18.0.8
-  - 172.18.0.10
-  - 172.18.0.4
   - 172.18.0.3
+  - 3.248.237.149
+  - 172.18.0.4
+  - 172.18.0.8
+  - 172.18.0.9
+  - 172.18.0.10
   container_id: 311bfcaee8d9
   pid: '215072'
 - connections:
@@ -659,17 +659,17 @@ docker_containers:
   LogPath: /var/lib/docker/containers/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498/a8f592e12b7a1288211974abc110caf5ee92c02bcd196cebb127d57668c93498-json.log
   MountLabel: ''
   Mounts:
-  - Destination: /app/utils.py
-    Mode: rw
-    Propagation: rprivate
-    RW: true
-    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-b.py
-    Type: bind
   - Destination: /app/main.py
     Mode: rw
     Propagation: rprivate
     RW: true
     Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/main-app-b.py
+    Type: bind
+  - Destination: /app/utils.py
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/fastapp_api/utils-app-b.py
     Type: bind
   Name: /observability-clientside-app-b-1
   NetworkSettings:
@@ -885,6 +885,12 @@ docker_containers:
   LogPath: /var/lib/docker/containers/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a/311bfcaee8d96b46be10704a4c9c671e218b69f187d3f61d776d2d570897135a-json.log
   MountLabel: ''
   Mounts:
+  - Destination: /etc/prometheus/prometheus.yml
+    Mode: rw
+    Propagation: rprivate
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/prometheus-collector.yaml
+    Type: bind
   - Destination: /etc/prometheus/rules.yaml
     Mode: rw
     Propagation: rprivate
@@ -899,12 +905,6 @@ docker_containers:
     RW: true
     Source: /var/lib/docker/volumes/c4f6b7ffb0bfe382d8155c33e01aae4fa13ed7c3a1d5004a68a1cc1e84e229a7/_data
     Type: volume
-  - Destination: /etc/prometheus/prometheus.yml
-    Mode: rw
-    Propagation: rprivate
-    RW: true
-    Source: /home/cqueiroz/gitrepo/observability-clientside/config/prometheus/prometheus-collector.yaml
-    Type: bind
   Name: /observability-clientside-prometheus-client-1
   NetworkSettings:
     Bridge: ''
@@ -1117,6 +1117,12 @@ docker_containers:
   LogPath: /var/lib/docker/containers/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82/4ee4407a436f504739353ec70a2a82dba5ebac5c7a1a37861a1b231501835b82-json.log
   MountLabel: ''
   Mounts:
+  - Destination: /rootfs
+    Mode: ro
+    Propagation: rslave
+    RW: false
+    Source: /
+    Type: bind
   - Destination: /var/run
     Mode: ro
     Propagation: rprivate
@@ -1140,12 +1146,6 @@ docker_containers:
     Propagation: rprivate
     RW: false
     Source: /dev/disk
-    Type: bind
-  - Destination: /rootfs
-    Mode: ro
-    Propagation: rslave
-    RW: false
-    Source: /
     Type: bind
   Name: /observability-clientside-cadvisor-1
   NetworkSettings:
@@ -1205,26 +1205,26 @@ docker_containers:
     Health:
       FailingStreak: 0
       Log:
-      - End: '2024-08-30T22:13:33.023628824+01:00'
+      - End: '2024-08-31T20:11:19.446608505+01:00'
         ExitCode: 0
         Output: ''
-        Start: '2024-08-30T22:13:32.976900251+01:00'
-      - End: '2024-08-30T22:14:03.060084754+01:00'
+        Start: '2024-08-31T20:11:19.411879227+01:00'
+      - End: '2024-08-31T20:11:49.484653268+01:00'
         ExitCode: 0
         Output: ''
-        Start: '2024-08-30T22:14:03.02437763+01:00'
-      - End: '2024-08-30T22:14:33.089169783+01:00'
+        Start: '2024-08-31T20:11:49.446908832+01:00'
+      - End: '2024-08-31T20:12:19.513920737+01:00'
         ExitCode: 0
         Output: ''
-        Start: '2024-08-30T22:14:33.060387727+01:00'
-      - End: '2024-08-30T22:15:03.127924131+01:00'
+        Start: '2024-08-31T20:12:19.485469272+01:00'
+      - End: '2024-08-31T20:12:49.547132373+01:00'
         ExitCode: 0
         Output: ''
-        Start: '2024-08-30T22:15:03.089934731+01:00'
-      - End: '2024-08-30T22:15:33.164906735+01:00'
+        Start: '2024-08-31T20:12:49.514495377+01:00'
+      - End: '2024-08-31T20:13:19.585049264+01:00'
         ExitCode: 0
         Output: ''
-        Start: '2024-08-30T22:15:33.128230975+01:00'
+        Start: '2024-08-31T20:13:19.548491197+01:00'
       Status: healthy
     OOMKilled: false
     Paused: false
@@ -2087,23 +2087,17 @@ docker_containers:
   LogPath: /var/lib/docker/containers/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8/1f0e4ee10e24a9e9c9212b570b7de2428beda846202f377bc9166f313d425dc8-json.log
   MountLabel: ''
   Mounts:
-  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_daddy.yaml
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_pepecorp.yaml
     Mode: ro
     Propagation: rprivate
     RW: false
-    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_data_daddy.yaml
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_pepecorp.yaml
     Type: bind
-  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_paula_vadinho_corp.yaml
+  - Destination: /var/lib/grafana/dashboards/node_exporter.json
     Mode: ro
     Propagation: rprivate
     RW: false
-    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_paula_vadinho_corp.yaml
-    Type: bind
-  - Destination: /var/lib/grafana/dashboards/observability_multitenancy_data_daddy.json
-    Mode: rw
-    Propagation: rprivate
-    RW: true
-    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_data_daddy.json
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/node_exporter.json
     Type: bind
   - Destination: /etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml
     Mode: ro
@@ -2129,17 +2123,23 @@ docker_containers:
     RW: false
     Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/cadvisor_insights.json
     Type: bind
-  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_pepecorp.yaml
-    Mode: ro
+  - Destination: /var/lib/grafana/dashboards/observability_multitenancy_data_daddy.json
+    Mode: rw
     Propagation: rprivate
-    RW: false
-    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_pepecorp.yaml
+    RW: true
+    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/observability_multitenancy_data_daddy.json
     Type: bind
-  - Destination: /var/lib/grafana/dashboards/node_exporter.json
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_daddy.yaml
     Mode: ro
     Propagation: rprivate
     RW: false
-    Source: /home/cqueiroz/gitrepo/observability-clientside/dashboards/node_exporter.json
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_data_daddy.yaml
+    Type: bind
+  - Destination: /etc/grafana/provisioning/datasources/provisioning-datasources_paula_vadinho_corp.yaml
+    Mode: ro
+    Propagation: rprivate
+    RW: false
+    Source: /home/cqueiroz/gitrepo/observability-clientside/grafana/grafana-provisioning-datasources_paula_vadinho_corp.yaml
     Type: bind
   Name: /observability-clientside-grafana-1
   NetworkSettings:
@@ -2204,19 +2204,44 @@ docker_containers:
     StartedAt: '2024-08-30T14:18:01.590954664Z'
     Status: running
 filesystems:
-- /dev/mapper/vgubuntu-root ext4      230G  158G   61G  73% /
+- /dev/mapper/vgubuntu-root ext4      230G  158G   60G  73% /
 - efivarfs                  efivarfs  246K  135K  106K  57% /sys/firmware/efi/efivars
 - /dev/nvme0n1p2            ext4      1.7G  450M  1.1G  30% /boot
 - /dev/nvme0n1p1            vfat      511M  6.1M  505M   2% /boot/efi
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/merged
-- overlay                   overlay   230G  158G   61G  73% /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/5571e094c0b3f5099784e7bd7b0d485cd9b8495e37fb5da52ef42c186268972a/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/29b983306946209b89ccd12d6017bcf0e32d66bcc0e019828e8f1a0234bd02bd/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/fe5407be21acb37b24b95c41455892c89db09b74b1754a9cf6af45bc20c29372/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/6ba5a8b11c3e1d188663e16430f4167b7e447b6786135135eecba0de66b3afac/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/41f2b22d080f432e9a9eed27a91be7f0e89c20cc4a28f4997d94aefe50339a3d/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/9c5c38d0f6f871d551c596e9eddeebdee7c7134b1e9053f48730cd269e3e272e/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/30b3a557cef550f8860d723537aa51b027b753b674328f6932cfabda3344adf8/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/d37dc3ac22861936dcdfff135d735af821084e521a9bcaced750440afe45c5f9/merged
+- overlay                   overlay   230G  158G   60G  73% /var/lib/docker/overlay2/43950b1e5d52ea96ce3db92f681d4c98054ee1cd72b51f1a8ccf142b99cbf302/merged
+host_connections:
+  '1131':
+    ip: 192.168.1.254
+    port: '67'
+    protocol: udp
+  '2164':
+    ip: 52.28.96.109
+    port: '443'
+    protocol: tcp
+  '35353':
+    ip: 52.123.134.206
+    port: '443'
+    protocol: tcp
+  '3605':
+    ip: '2a03:2880:f258:1c3:'
+    port: '443'
+    protocol: tcp6
+  '518552':
+    ip: 20.189.173.7
+    port: '443'
+    protocol: tcp
+  '743736':
+    ip: 2a03:2880:f258:cb:f
+    port: '443'
+    protocol: tcp6
 hostname: UX-080
 network_info:
 - addr_info:
@@ -2270,27 +2295,27 @@ network_info:
     label: wlp0s20f3
     local: 192.168.1.159
     noprefixroute: true
-    preferred_life_time: 72087
+    preferred_life_time: 73155
     prefixlen: 24
     scope: global
-    valid_life_time: 72087
+    valid_life_time: 73155
   - dynamic: true
     family: inet6
-    local: 2a00:23c6:2986:cd01:6663:6c19:79b0:150
-    preferred_life_time: 103
+    local: 2a00:23c6:2986:cd01:2d75:f91d:b7ae:53d9
+    preferred_life_time: 116
     prefixlen: 64
     scope: global
     temporary: true
-    valid_life_time: 283
+    valid_life_time: 296
   - dynamic: true
     family: inet6
     local: 2a00:23c6:2986:cd01:332b:50b1:f7b2:11c9
     mngtmpaddr: true
     noprefixroute: true
-    preferred_life_time: 103
+    preferred_life_time: 116
     prefixlen: 64
     scope: global
-    valid_life_time: 283
+    valid_life_time: 296
   - family: inet6
     local: fe80::f545:6eda:fd6d:38cd
     noprefixroute: true
@@ -2360,15 +2385,6 @@ network_info:
   operstate: DOWN
   qdisc: noqueue
 - addr_info:
-  - broadcast: 100.111.223.255
-    family: inet
-    label: vpn0
-    local: 100.111.223.227
-    noprefixroute: true
-    preferred_life_time: 4294967295
-    prefixlen: 24
-    scope: global
-    valid_life_time: 4294967295
   - family: inet6
     local: fe80::950e:e224:a9e:6b31
     preferred_life_time: 4294967295
@@ -2377,17 +2393,17 @@ network_info:
     stable-privacy: true
     valid_life_time: 4294967295
   flags:
+  - NO-CARRIER
   - POINTOPOINT
   - MULTICAST
   - NOARP
   - UP
-  - LOWER_UP
   group: default
   ifindex: 6
   ifname: vpn0
   link_type: none
   mtu: 1300
-  operstate: UP
+  operstate: DOWN
   qdisc: fq_codel
   txqlen: 500
 - addr_info:
