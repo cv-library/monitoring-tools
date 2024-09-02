@@ -1,0 +1,27 @@
+global:
+  scrape_interval: 5s
+  external_labels:
+    cluster: resume-library
+    namespace: poc
+
+rule_files:
+  - /etc/prometheus/rules.yaml
+
+scrape_configs:
+  - job_name: resume-library/microservices
+    static_configs:
+      - targets: ['application-resume-library:8000']
+        labels:
+          container: 'application-resume-library'
+      - targets: ['locations-resume-library:8000']
+        labels:
+          container: 'locations-resume-library'
+      - targets: ['candidates-resume-library:8000']
+        labels:
+          container: 'candidates-resume-library'
+
+
+remote_write:
+  - url: http://load-balancer:9009/api/v1/push
+    headers:
+      X-Scope-OrgID: resume-library

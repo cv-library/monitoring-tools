@@ -1,0 +1,56 @@
+x-logging: &default-logging
+  driver: loki
+  options:
+    loki-url: 'http://localhost:3100/loki/api/v1/push'
+    loki-tenant-id: 'cv-library'
+    loki-pipeline-stages: |
+      - multiline:
+          firstline: '^\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2}'
+          max_wait_time: 3s
+      - regex:
+          expression: '^(?P<time>\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2},d{3}) (?P<message>(?s:.*))$$'
+
+version: "3.4"
+services:
+  application-cv-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./config/cvl_rl_app/main-application-cv-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-application-cv-library.py:/app/utils.py"
+    environment:
+      APP_NAME: "application-cv-library"
+      TENANT: "cv-library"
+    logging: *default-logging
+
+  locations-cv-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8001:8000"
+    environment:
+      APP_NAME: "locations-cv-library"
+      TENANT: "cv-library"
+    volumes:
+      - "./config/cvl_rl_app/main-locations-cv-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-locations-cv-library.py:/app/utils.py"
+    logging: *default-logging
+
+  candidates-cv-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8002:8000"
+    environment:
+      APP_NAME: "candidates-cv-library"
+      TENANT: "cv-library"
+    volumes:
+      - "./config/cvl_rl_app/main-candidates-cv-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-candidates-cv-library.py:/app/utils.py"
+    logging: *default-logging
+
+  smoke:
+    image: poc/smoke:latest
+    command: ["/smoke/request-script.sh"]
+    environment:
+      platform: "cv-library"
+

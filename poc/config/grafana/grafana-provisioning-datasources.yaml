@@ -1,0 +1,105 @@
+apiVersion: 1
+
+datasources:
+  - name: mimir-cv-library
+    type: prometheus
+    access: proxy
+    orgId: 1
+    url: http://load-balancer:9009/prometheus
+    version: 1
+    editable: false
+    jsonData:
+      httpHeaderName1: "X-Scope-OrgID"
+    secureJsonData:
+      httpHeaderValue1: "cv-library"
+    isDefault: false 
+
+  - name: mimir-resume-library
+    type: prometheus
+    access: proxy
+    orgId: 1
+    url: http://load-balancer:9009/prometheus
+    version: 1
+    editable: false
+    jsonData:
+      httpHeaderName1: "X-Scope-OrgID"
+    secureJsonData:
+      httpHeaderValue1: "resume-library"
+    isDefault: false
+      
+  - name: Loki-cv-library 
+    type: loki
+    access: proxy
+    uid: loki-cv-library
+    url: http://loki:3100
+    jsonData:
+      derivedFields:
+        - datasourceUid: tempo-cv-library 
+          matcherRegex: (?:trace_id)=(\w+)
+          name: TraceID
+          url: $${__value.raw}
+      httpHeaderName1: "X-Scope-OrgID"
+      implementation: "cortex"
+    secureJsonData:
+      httpHeaderValue1: "cv-library"
+
+  - name: Loki-resume-library 
+    type: loki
+    access: proxy
+    uid: loki-resume-library
+    url: http://loki:3100
+    jsonData:
+      derivedFields:
+        - datasourceUid: tempo-resume-library 
+          matcherRegex: (?:trace_id)=(\w+)
+          name: TraceID
+          url: $${__value.raw}
+      httpHeaderName1: "X-Scope-OrgID"
+      implementation: "cortex"
+    secureJsonData:
+      httpHeaderValue1: "resume-library"
+
+
+  - name: tempo-resume-library
+    type: tempo
+    access: proxy
+    uid: tempo-resume-library
+    url: http://tempo:3200
+    jsonData:
+      nodeGraph:
+        enabled: true
+      serviceMap:
+        datasourceUid: 'mimir-resume-library'
+      tracesToLogs:
+        datasourceUid: loki-resume-library
+        filterByTraceID: true
+        spanEndTimeShift: "500ms"
+        spanStartTimeShift: "-500ms"
+        tags: ['beast']
+      httpHeaderName1: "X-Scope-OrgID"
+      implementation: "cortex"
+    secureJsonData:
+      httpHeaderValue1: "resume-library"
+
+  - name: tempo-cv-library
+    type: tempo
+    access: proxy
+    uid: tempo-cv-library
+    url: http://tempo:3200
+    jsonData:
+      nodeGraph:
+        enabled: true
+      serviceMap:
+        datasourceUid: 'mimir-cv-library'
+      tracesToLogs:
+        datasourceUid: loki-cv-library
+        filterByTraceID: true
+        spanEndTimeShift: "500ms"
+        spanStartTimeShift: "-500ms"
+        tags: ['beast']
+      httpHeaderName1: "X-Scope-OrgID"
+      implementation: "cortex"
+    secureJsonData:
+      httpHeaderValue1: "cv-library"
+
+        
