@@ -1,0 +1,56 @@
+x-logging: &default-logging
+  driver: loki
+  options:
+    loki-url: 'http://localhost:3100/loki/api/v1/push'
+    loki-tenant-id: 'resume-library'
+    loki-pipeline-stages: |
+      - multiline:
+          firstline: '^\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2}'
+          max_wait_time: 3s
+      - regex:
+          expression: '^(?P<time>\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2},d{3}) (?P<message>(?s:.*))$$'
+
+version: "3.4"
+services:
+  application-resume-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8003:8000"
+    volumes:
+      - "./config/cvl_rl_app/main-application-resume-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-application-resume-library.py:/app/utils.py"
+    environment:
+      APP_NAME: "application-resume-library"
+      TENANT: "resume-library"
+    logging: *default-logging
+
+  locations-resume-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8004:8000"
+    environment:
+      APP_NAME: "locations-resume-library"
+      TENANT: "resume-library"
+    volumes:
+      - "./config/cvl_rl_app/main-locations-resume-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-locations-resume-library.py:/app/utils.py"
+    logging: *default-logging
+
+  candidates-resume-library:
+    image: poc/cvl_rl_app:latest
+    ports:
+      - "8005:8000"
+    environment:
+      APP_NAME: "candidates-resume-library"
+      TENANT: "resume-library"
+    volumes:
+      - "./config/cvl_rl_app/main-candidates-resume-library.py:/app/main.py"
+      - "./config/cvl_rl_app/utils-candidates-resume-library.py:/app/utils.py"
+    logging: *default-logging
+
+  smoke:
+    image: poc/smoke:latest
+    command: ["/smoke/request-script.sh"]
+    environment:
+      platform: "resume-library"
+

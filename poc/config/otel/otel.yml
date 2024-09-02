@@ -1,0 +1,58 @@
+extensions:
+  headers_setter:
+    headers:
+      - key: X-Scope-OrgID
+        from_context: tenant-id
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        include_metadata: true
+        endpoint: 0.0.0.0:4317
+
+processors:
+  routing:
+    default_exporters:
+    - otlp/default
+    error_mode: ignore
+    attribute_source: context 
+    from_attribute: tenantid
+    table:
+      - value: blabla 
+        exporters: [otlp/blabla]
+
+exporters:
+  logging:
+  otlp/cvl_rl:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+    auth:
+      authenticator: headers_setter
+
+  otlp/default:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+    headers:
+      X-Scope-OrgID: default
+       
+  prometheusremotewrite:
+    endpoint: http://load-balancer:9009/api/v1/push
+    tls:
+      insecure: true
+    auth:
+      authenticator: headers_setter
+
+service:
+  extensions: [ headers_setter ]
+  telemetry:
+    logs:
+      level: "debug"
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: []
+      exporters: [logging,otlp/cvl_rl]
+
+
