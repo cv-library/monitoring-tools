@@ -13,7 +13,10 @@ x-logging: &default-logging
 version: "3.4"
 services:
   application-cv-library:
-    image: poc/cvl_rl_app:latest
+    build:
+      context: ./cvl_rl_app
+      dockerfile: Dockerfile
+    image: poc/cvl_rl_app:1.0
     ports:
       - "8000:8000"
     volumes:
@@ -25,7 +28,7 @@ services:
     logging: *default-logging
 
   locations-cv-library:
-    image: poc/cvl_rl_app:latest
+    image: poc/cvl_rl_app:1.0
     ports:
       - "8001:8000"
     environment:
@@ -37,7 +40,7 @@ services:
     logging: *default-logging
 
   candidates-cv-library:
-    image: poc/cvl_rl_app:latest
+    image: poc/cvl_rl_app:1.0
     ports:
       - "8002:8000"
     environment:
@@ -49,7 +52,10 @@ services:
     logging: *default-logging
 
   smoke:
-    image: poc/smoke:latest
+    build:
+      context: ./smoke 
+      dockerfile: Dockerfile
+    image: poc/smoke:1.0
     command: ["/smoke/request-script.sh"]
     environment:
       platform: "cv-library"

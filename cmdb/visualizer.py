@@ -12,7 +12,8 @@ def fetch_data_from_db(db_file):
     servers = cursor.fetchall()
     
     # Fetch Active Connections
-    cursor.execute("SELECT server_id, endpoint, process FROM ActiveConnections")
+
+    cursor.execute("SELECT server_id, ip_address FROM HostConnections")
     connections = cursor.fetchall()
     
     conn.close()
@@ -27,10 +28,10 @@ def create_graph(servers, connections):
         G.add_node(hostname, type='server')
 
     # Add connection edges
-    for server_id, endpoint, process in connections:
+    for server_id, ip_address  in connections:
         server_name = server_dict.get(server_id)
-        G.add_node(endpoint, type='endpoint')  # Add endpoint as a node
-        G.add_edge(server_name, endpoint, label=process)
+        G.add_node(ip_address, type='endpoint')  
+        G.add_edge(server_name, ip_address, label=ip_address)
 
     return G
 
