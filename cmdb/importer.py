@@ -1,6 +1,8 @@
+from haproxy_parser import parse_config
 import sqlite3
 import yaml
 import glob
+import re
 
 def create_db_schema(conn):
     cursor = conn.cursor()
@@ -107,7 +109,18 @@ def create_db_schema(conn):
         FOREIGN KEY (server_id) REFERENCES Servers(id)
     )
     ''')
-
+    # HA Proxy LB cv-library
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS HAProxyLB (
+        server_id INTEGER,
+        listen TEXT UNIQUE,
+        bind_port TEXT,
+        httpcheck TEXT,
+        target_servers TEXT,
+        target_port TEXT,
+        FOREIGN KEY (server_id) REFERENCES Servers(id)
+    )
+    ''')
     conn.commit()
 
 def format_ip_info(addr_info):
@@ -128,6 +141,7 @@ def get_docker_ip(container_info):
             ip_entries.append(ip_address)
     return ", ".join(ip_entries)
 
+haproxy_parser_data = parse_config('./config/haproxy.cfg')
 
 
 def server_exists(cursor, hostname):
@@ -232,8 +246,22 @@ def insert_data(conn, yaml_file):
         INSERT INTO Filesystems (server_id, source, fstype, size, used, avail, pcent, target)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ''', (server_id, *fields))
+
+  # INsert HAproxy parser config
+    for haproxy_items in haproxy_parser_data:
+        #print(haproxy_items['bind port'])
+        try:
+            cursor.execute('''
+            INSERT INTO HAProxyLB  (server_id, listen, bind_port, httpcheck, target_servers, target_port)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ''', (server_id, haproxy_items['listen'], haproxy_items['bind_port'], haproxy_items['httpchk'], str(haproxy_items['target_servers']), haproxy_items['target_port']))
+        except:
+            print("skipping ha proxy import, already present")
+
     
     conn.commit()
+
+  
 
 if __name__ == "__main__":
     db_conn = sqlite3.connect('cmdb.db')

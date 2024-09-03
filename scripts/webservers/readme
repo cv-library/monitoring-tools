@@ -1,0 +1,8 @@
+list1 from:
+
+docker ps -q | xargs -I ARGS docker inspect ARGS --format '{{.Name}} {{json .HostConfig.PortBindings}}' 
+
+
+list2 from:
+
+/home/cqueiroz/gitrepo/monitoring-tools/scripts/web04/gather_target_bind_ports.py
