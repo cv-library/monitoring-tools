@@ -4,7 +4,7 @@ import yaml
 
 
 list3_formated={}
-
+list4_formated={}
 with open('list1.txt', 'r') as f:
     list1 = f.readlines()
 
@@ -13,6 +13,9 @@ with open('list2.txt', 'r') as f:
 
 with open('list3.txt', 'r') as f:
     list3 = f.read()
+
+with open('list4.txt', 'r') as f:
+    list4 = f.read()
 
 
 def parse_list1(line):
@@ -48,56 +51,47 @@ def format_list3(list3_dict):
     return list3_formated
 
 
-list2_blocks = list2.split('\n\n')  # Assuming each block is separated by double newlines, please use the script to generate list2
+def format_list4(list4_dict):    
+    for key, value in list4_dict.items():
+        list4_formated[key]=value
+    return list4_formated
+
+
+list2_blocks = list2.split('\n\n')  # Assuming each block is separated by double newlines, please use the script to generate list2 <><><>
 list2_details = [parse_list2(block) for block in list2_blocks]
 list3_dict = yaml.safe_load(list3)
+list4_dict = yaml.safe_load(list4)
 formated_list3=format_list3(list3_dict)
+formated_list4=format_list4(list4_dict)
 
 
 
 for line in list1:
     service_name, service_ports = parse_list1(line)
-    match_found = False
+    print(f"{service_name}:")
+    for key, value in formated_list4.items():
+        if key == service_name:
+            if re.match(r"(?i)yes", value['Nagios']):
+                print("    Nagios: YES")
+                print("        comments:")
+                for line in value['comments'].splitlines():
+                    print(f"           {line.strip()}")              
+        
+    print("    Dashboards: []")
+    print("    Metrics: []")
+    print("    Logs: []")
+    if service_name in formated_list3:
+        print(f"    SQS: \"{formated_list3[service_name]}\"")
+    else:
+        print(f"    SQS: NO")
     for port, details in service_ports.items():
         host_port = details[0]['HostPort']
-    
-        
         for listen, bind_port, httpchk, servers, port_target in list2_details:
-            sqs_list=[]
-            for item in formated_list3:
-                if item == service_name:
-                    sqs_list = formated_list3[item]
-                    break
-                else:
-                    sqs_list=[]
-
             if host_port == port_target:
-                match_found = True
-                print(f"{service_name}:")
-                print("    Nagios: []")
-                print("    Dashboards: []")
-                print("    Metrics: []")
-                print("    Logs: []")
-                print(f"    SQS: \"{sqs_list}\"\n")
                 print("    haproxy:")
                 print(f"        listen: \"{listen}\"")
                 print(f"        bind_port: \"{bind_port}\"")
                 print(f"        httpchk: \"{httpchk}\"")
                 print(f"        servers: {servers}")
                 print(f"        port_target: \"{port_target}\"")
-                print(f"    host_port: \"{host_port}\"\n")
-    
-            if not match_found:
-                print(f"{service_name}:")
-                print("    Nagios: []")
-                print("    Dashboards: []")
-                print("    Metrics: []")
-                print("    Logs: []")
-                print(f"    SQS: \"{sqs_list}\"\n")
-                print("    haproxy:")
-                print("        listen: \"\"")
-                print("        bind_port: \"\"")
-                print("        httpchk: \"\"")
-                print("        servers: []")
-                print("        port_target: \"\"")
-                print(f"    host_port: \"{host_port}\"\n")
+    print(f"    host_port: \"{host_port}\"\n\n\n")

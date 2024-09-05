@@ -14,3 +14,6 @@ docker ps -q | xargs -I ARGS docker inspect ARGS --format '{{.Name}} {{json .Con
 
 +
 ~/gitrepo/monitoring-tools/scripts/format_env.sh
+
+
+List4 from (manually, do not delete it)

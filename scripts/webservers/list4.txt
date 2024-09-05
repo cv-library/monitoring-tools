@@ -1,0 +1,173 @@
+admin-auth-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+boost-banners.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+business-accounts.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+candidate-offers.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+candidate-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+custom-job-template.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+cv-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+disque.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+doc-convert-api.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+doc-convert-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+doc-service-rest.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+doc-view-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+experiment-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+features-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+fluentd.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+industry-classifier.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-applications.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-classification-data.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-classification.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-connector.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-credits.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-description-processor:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-info.01:
+    Nagios: "yes"
+    comments: |
+        1-plugins/check_logfiles command checks against haproxy.log to search for ERRRORs. 
+        script returns: 
+        OK - no errors or warnings|job_info_errors_lines=2853 job_info_errors_warnings=0 job_info_errors_criticals=0 job_info_errors_unknowns=0
+
+        2-nrpe service running on the host. It might get timing out and not giving response to nagios server.
+        
+        3-filebeat with pipeline exporting only the errors to cerebro would make it more reliable.
+        it is not grouped or aggregated between APP Servers, that means, it is individual per server. 
+        Checking the haproxy api and leverage the builtin health check turns into a more reliable check.
+
+job-outgoing-feed-perl-api.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+job-performance.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+jobtitle-sanitization-service:
+    Nagios: "no"
+    comments: |
+        - comments here
+locations.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+mail-validation.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+newrelic-c-daemon.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+pfp.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+photo.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+profile-alert-prediction.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+prs.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+qrcode-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+search-training-service-eval.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+search-training-service.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+seniority-classifier.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+snowplow-collector-proxy.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+spellchecker.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+tableau-user.01:
+    Nagios: "no"
+    comments: |
+        - comments here
+www.01:
+    Nagios: "no"
+    comments: |
+        - comments here
