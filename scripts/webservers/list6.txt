@@ -1,0 +1,164 @@
+admin-auth-service.01:
+    Dashboards "no"
+    comments: |
+        - No dashboard found
+boost-banners.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+business-accounts.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+candidate-offers.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+candidate-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+custom-job-template.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+cv-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+disque.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+doc-convert-api.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+doc-convert-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+doc-service-rest.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+doc-view-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+experiment-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+features-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+fluentd.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+industry-classifier.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-applications.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-classification-data.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-classification.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-connector.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-credits.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-description-processor:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-info.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-outgoing-feed-perl-api.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+job-performance.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+jobtitle-sanitization-service:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+locations.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+mail-validation.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+newrelic-c-daemon.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+pfp.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+photo.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+profile-alert-prediction.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+prs.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+qrcode-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+search-training-service-eval.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+search-training-service.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+seniority-classifier.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+snowplow-collector-proxy.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+spellchecker.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+tableau-user.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found
+www.01:
+    Dashboards: "no"
+    comments: |
+        - No dashboard found

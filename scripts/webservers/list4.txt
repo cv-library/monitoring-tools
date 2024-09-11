@@ -1,23 +1,23 @@
 admin-auth-service.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http port check from monitor server
 boost-banners.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No container monitoring except from docker running service (global).
 business-accounts.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No container monitoring except from docker running service (global).
 candidate-offers.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No container monitoring except from docker running service (global).
 candidate-service.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - from Monitor3 we have "check error logs" script that only is used for solr-candidates that is running on search servers, not for candidate-service. 
 custom-job-template.01:
     Nagios: "no"
     comments: |
@@ -27,147 +27,167 @@ cv-service.01:
     comments: |
         - comments here
 disque.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - TCP check from monitor3 to port 7711, ONLY for APP01, missing for APP02,04,05
+        - check_disque_memory_usage (memory usage of the container)
 doc-convert-api.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No monitoring in place for this container service
 doc-convert-service.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - check the age of file content (check_docker_log_age_doc_convert) and return if there is an error,
+          otherwise it will return OK. check of "no output"        
 doc-service-rest.01:
     Nagios: "no"
     comments: |
-        - comments here
+           - Doc service branded queue size. check against graphite the target=stats.gauges.service.disque.doc-service-branded, then check the command
+             check_graphite_data!50!150 in monitor3 server.
 doc-view-service.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No monitoring in place for this service, but the docker service monitor (global)
 experiment-service.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No monitoring in place for this service, but the docker service monitor (global)
 features-service.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http check port from monitor server
 fluentd.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - Fluentd check process ( if the process is running)
+        - fluentd check for errors in the logs
+        - fluentd http check from monitor3
+        - fluentd buffer size
 industry-classifier.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http check port from monitor server
 job-applications.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No monitoring in place for this service
 job-classification-data.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - No monitoring in place for this service
 job-classification.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - check_logfiles against docker container log to check for errors. 
+        output:
+        OK - no errors or warnings|docker_job-classification_lines=2 docker_job-classification_warnings=0 docker_job-classification_criticals=0 docker_job-classification_unknowns=0
 job-connector.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 job-credits.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 job-description-processor:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 job-info.01:
     Nagios: "yes"
     comments: |
         1-plugins/check_logfiles command checks against haproxy.log to search for ERRRORs. 
         script returns: 
-        OK - no errors or warnings|job_info_errors_lines=2853 job_info_errors_warnings=0 job_info_errors_criticals=0 job_info_errors_unknowns=0
-
-        2-nrpe service running on the host. It might get timing out and not giving response to nagios server.
-        
-        3-filebeat with pipeline exporting only the errors to cerebro would make it more reliable.
-        it is not grouped or aggregated between APP Servers, that means, it is individual per server. 
-        Checking the haproxy api and leverage the builtin health check turns into a more reliable check.
-
+        OK - no errors or warnings|job_info_errors_lines=2853 job_info_errors_warnings=0 job_info_errors_criticals=0 job_info_errors_unknowns=0    
+        - check_sqs_queue_size for the following queues: 
+            - cvl_production_job_event_for_job_info
+            - cvl_production_job_event_for_job_info_dead_letter
+            - ijm-process-cand-activity
+            - ijm-process-cand-activity-dead-letter
 job-outgoing-feed-perl-api.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 job-performance.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 jobtitle-sanitization-service:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 locations.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http check port from monitor service
 mail-validation.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http check port - from monitor server
 newrelic-c-daemon.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitoring for this service
 pfp.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - check_sqs_queue_size for the following queues:
+            - cvl_production_job_event_for_pfp
+            - cvl_production_job_event_for_pfp_dead_letter
+            - pfp-job-event
+            - pfp-job-event-dead-letter
+            - pfp-process-view
+            - pfp-process-view-dead-letter
+            - pfp-report-requests
+            - pfp-report-requests-dead-letter
 photo.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http port check from monitor server
 profile-alert-prediction.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitor check for this service
 prs.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no monitor check for this service
 qrcode-service.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - http port check from monitor server
 search-training-service-eval.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no checks for this service
 search-training-service.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - check_log_files against docker container log - output:
+        OK - no errors or warnings|search_training_service_errors_lines=0 search_training_service_errors_warnings=0 
+        search_training_service_errors_criticals=0 search_training_service_errors_unknowns=0
 seniority-classifier.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - http port check is commented out in the nagios config.
 snowplow-collector-proxy.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no checks for this service
 spellchecker.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - command check_spellcheckab is defined in commands.cfg of nagios config. but it is not defined in the services to be used.
 tableau-user.01:
     Nagios: "no"
     comments: |
-        - comments here
+        - no checks for this service
 www.01:
-    Nagios: "no"
+    Nagios: "yes"
     comments: |
-        - comments here
+        - check_logfiles:
+            - mysql service status
+            - check credentials failure
+            - check template errors
+        - memcached processes check - across all APP servers

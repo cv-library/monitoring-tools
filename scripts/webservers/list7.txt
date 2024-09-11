@@ -1,0 +1,195 @@
+app01:
+    Nagios: "yes"
+    nagios_comments: |
+        - cron service (check if service is running)
+        - cron syntax (checking the cron syntax command - check cfg)
+        - Disk Space (/srv, /var and /) - check_disk command passing those args
+        - Disk Space Alerts (same as above, looks like it is duplicate)
+        - load average (load 1, 5, 15 min) - check_load script
+        - memcached process (for www) - check_process script
+        - monit service running - check_monit script)
+        - OOM processes killed (check_log_files against /var/log/messages)
+        - missing environment variable (check_log_files against /var/log/docker/*.log)
+        - phpMyAdmin - check_docker_phpmyadmin - check if phpMyAdmin container is running
+        - PING - icmp check from monitor servers
+        - postfix (check_procs script, looking for master)
+        - postfix queue (check_mailq script. returns the length of the queue)
+        - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+        - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+        - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+        - Semaphores free (check_ipc command and validate the thresholds passed as arguments.)
+        - Shorewall (check_shorewall command) - return if firewall whether is running or not
+        - Users (check_users command) returns the users currently logged in
+        - docker duplicated ports (check_docker_dup_ports command)
+        - docker process running (check_docker_procs command)
+        - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+        - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+        - haproxy file service (check_http on localhost:9021 /health from the host) it returns HTTP OK
+        - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+        - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+        - starman process count (check_procs script with the arg 'starman worker')
+        - starman process count OOH (exactly the same as above, they are duplicate)
+        - starman requests (check_starman_requests script - it sends to /dev/shm/www/scoreboard, and the output is # of active requests)
+    Dashboard: "yes"
+    dashboard_comments: |
+        - https://grafana.cv-library.co.uk/d/cWCMX2Jiz/app-server-performance?orgId=1  (graphite metrics)
+        - https://grafana.cv-library.co.uk/d/Num4zfk7z/app-server-rss?orgId=1 ( RSS starman - statsd and collectd)
+        - https://grafana.cv-library.co.uk/d/000000030/app-servers?orgId=1&refresh=1m  (collectd - app servers performance)
+        - https://grafana.cv-library.co.uk/d/000000001/app-servers-load-on-deploys?orgId=1 ( load on deploy)
+app01-ext:
+    Nagios: "yes"
+    nagios_comments: |
+        - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+        - Check open ports (active checks disabled)
+        - Check that Docker ports are closed ( check_ports_closed!9000-9500 running from monitor servers)
+        - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+    Dashboard: "no"
+    dashboard_comments: |
+        - no dashboard
+app02:
+    Nagios: "yes"
+    nagios_comments: |
+        - cron service (check if service is running)
+        - cron syntax (checking the cron syntax command - check cfg)
+        - Disk Space (/srv, /var and /) - check_disk command passing those args
+        - Disk Space Alerts (same as above, looks like it is duplicate)
+        - load average (load 1, 5, 15 min) - check_load script
+        - memcached process (for www) - check_process script
+        - monit service running - check_monit script)
+        - OOM processes killed (check_log_files against /var/log/messages)
+        - missing environment variable (check_log_files against /var/log/docker/*.log)
+        - PING - icmp check from monitor servers
+        - postfix (check_procs script, looking for master)
+        - postfix queue (check_mailq script. returns the length of the queue)
+        - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+        - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+        - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+        - Semaphores free (check_ipc command and validate the thresholds passed as arguments.)
+        - Shorewall (check_shorewall command) - return if firewall whether is running or not
+        - Users (check_users command) returns the users currently logged in
+        - docker duplicated ports (check_docker_dup_ports command)
+        - docker process running (check_docker_procs command)
+        - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+        - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+        - haproxy file service (check_http on localhost:9021 /health from the host) it returns HTTP OK
+        - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+        - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+        - starman process count (check_procs script with the arg 'starman worker')
+        - starman process count OOH (exactly the same as above, they are duplicate)
+        - starman requests (check_starman_requests script - it sends to /dev/shm/www/scoreboard, and the output is # of active requests)
+    Dashboard: "yes"
+    dashboard_comments: |
+        - https://grafana.cv-library.co.uk/d/cWCMX2Jiz/app-server-performance?orgId=1  (graphite metrics)
+        - https://grafana.cv-library.co.uk/d/Num4zfk7z/app-server-rss?orgId=1 ( RSS starman - statsd and collectd)
+        - https://grafana.cv-library.co.uk/d/000000030/app-servers?orgId=1&refresh=1m  (collectd - app servers performance)
+        - https://grafana.cv-library.co.uk/d/000000001/app-servers-load-on-deploys?orgId=1 ( load on deploy)
+app02-ext:
+    Nagios: "yes"
+    nagios_comments: |
+        - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+        - Check open ports (active checks disabled)
+        - Check that Docker ports are closed ( check_ports_closed!9000-9500 running from monitor servers)
+        - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+    Dashboard: "no"
+    dashboard_comments: |
+        - no dashboard
+app04:
+    Nagios: "yes"
+    nagios_comments: |
+        - cron service (check if service is running)
+        - cron syntax (checking the cron syntax command - check cfg)
+        - Disk Space (/srv, /var and /) - check_disk command passing those args
+        - Disk Space Alerts (same as above, looks like it is duplicate)
+        - load average (load 1, 5, 15 min) - check_load script
+        - memcached process (for www) - check_process script
+        - monit service running - check_monit script)
+        - OOM processes killed (check_log_files against /var/log/messages)
+        - missing environment variable (check_log_files against /var/log/docker/*.log)
+        - PING - icmp check from monitor servers
+        - postfix (check_procs script, looking for master)
+        - postfix queue (check_mailq script. returns the length of the queue)
+        - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+        - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+        - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+        - Semaphores free (check_ipc command and validate the thresholds passed as arguments.)
+        - Shorewall (check_shorewall command) - return if firewall whether is running or not
+        - Users (check_users command) returns the users currently logged in
+        - docker duplicated ports (check_docker_dup_ports command)
+        - docker process running (check_docker_procs command)
+        - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+        - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+        - haproxy file service (check_http on localhost:9021 /health from the host) it returns HTTP OK
+        - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+        - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+        - starman process count (check_procs script with the arg 'starman worker')
+        - starman process count OOH (exactly the same as above, they are duplicate)
+        - starman requests (check_starman_requests script - it sends to /dev/shm/www/scoreboard, and the output is # of active requests)
+    Dashboard: "yes"
+    dashboard_comments: |
+        - https://grafana.cv-library.co.uk/d/cWCMX2Jiz/app-server-performance?orgId=1  (graphite metrics)
+        - https://grafana.cv-library.co.uk/d/Num4zfk7z/app-server-rss?orgId=1 ( RSS starman - statsd and collectd)
+        - https://grafana.cv-library.co.uk/d/000000030/app-servers?orgId=1&refresh=1m  (collectd - app servers performance)
+        - https://grafana.cv-library.co.uk/d/000000001/app-servers-load-on-deploys?orgId=1 ( load on deploy)
+app04-ext:
+    Nagios: "yes"
+    nagios_comments: |
+        - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+        - Check open ports (active checks disabled)
+        - Check that Docker ports are closed ( check_ports_closed!9000-9500 running from monitor servers)
+        - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+    Dashboard: "no"
+    dashboard_comments: |
+        - no dashboard
+app05:
+    Nagios: "yes"
+    nagios_comments: |
+        - cron service (check if service is running)
+        - cron syntax (checking the cron syntax command - check cfg)
+        - Disk Space (/srv, /var and /) - check_disk command passing those args
+        - Disk Space Alerts (same as above, looks like it is duplicate)
+        - load average (load 1, 5, 15 min) - check_load script
+        - memcached process (for www) - check_process script
+        - monit service running - check_monit script)
+        - OOM processes killed (check_log_files against /var/log/messages)
+        - missing environment variable (check_log_files against /var/log/docker/*.log)
+        - PING - icmp check from monitor servers
+        - postfix (check_procs script, looking for master)
+        - postfix queue (check_mailq script. returns the length of the queue)
+        - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+        - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+        - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+        - Semaphores free (check_ipc command and validate the thresholds passed as arguments.)
+        - Shorewall (check_shorewall command) - return if firewall whether is running or not
+        - Users (check_users command) returns the users currently logged in
+        - docker duplicated ports (check_docker_dup_ports command)
+        - docker process running (check_docker_procs command)
+        - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+        - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+        - haproxy file service (check_http on localhost:9021 /health from the host) it returns HTTP OK
+        - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+        - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+        - starman process count (check_procs script with the arg 'starman worker')
+        - starman process count OOH (exactly the same as above, they are duplicate)
+        - starman requests (check_starman_requests script - it sends to /dev/shm/www/scoreboard, and the output is # of active requests)
+    Dashboard: "yes"
+    dashboard_comments: |
+        - https://grafana.cv-library.co.uk/d/cWCMX2Jiz/app-server-performance?orgId=1  (graphite metrics)
+        - https://grafana.cv-library.co.uk/d/Num4zfk7z/app-server-rss?orgId=1 ( RSS starman - statsd and collectd)
+        - https://grafana.cv-library.co.uk/d/000000030/app-servers?orgId=1&refresh=1m  (collectd - app servers performance)
+        - https://grafana.cv-library.co.uk/d/000000001/app-servers-load-on-deploys?orgId=1 ( load on deploy)
+app05-ext:
+    Nagios: "yes"
+    nagios_comments: |
+        - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+        - Check open ports (active checks disabled)
+        - Check that Docker ports are closed ( check_ports_closed!9000-9500 running from monitor servers)
+        - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+    Dashboard: "no"
+    dashboard_comments: |
+        - no dashboard
+
+
+
+
+
+    

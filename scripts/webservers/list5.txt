@@ -1,0 +1,187 @@
+admin-auth-service.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+boost-banners.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+business-accounts.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+candidate-offers.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+candidate-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+custom-job-template.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+cv-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+disque.01:
+    Logs: "no"
+    comments: |
+        - No traffic from haproxy, therefore no http access/error logs. No fluentd rule configuration, and docker log file is empty
+doc-convert-api.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - haproxy access log.
+doc-convert-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - NO haproxy access log.
+doc-service-rest.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - haproxy access/error log in monitor servers.
+doc-view-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - haproxy access/error log in monitor servers.
+experiment-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - NO haproxy access log.
+features-service.01:
+    Logs: "no"
+    comments: |
+        - docker container logs empty. No HAPROXY logs
+fluentd.01:
+    Logs: "no"
+    comments: |
+        - It process as a collector for the starman logs for www and job-info and push them to bigquery accordnly to the match
+industry-classifier.01:
+    Logs: "no"
+    comments: |
+        - comments here
+job-applications.01:
+    Logs: "no"
+    comments: |
+        - docker container logs empty. No HAPROXY logs
+job-classification-data.01:
+    Logs: "no"
+    comments: |
+        - docker container logs empty. No HAPROXY logs
+job-classification.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - haproxy access/error log.
+job-connector.01:
+    Logs: "yes"
+    comments: |
+        - NO docker container logs - it is empty
+        - haproxy access/error log.
+job-credits.01:
+    Logs: "no"
+    comments: |
+        - NO docker container logs - it is empty
+        - NO haproxy access/error log.
+job-description-processor:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - NO haproxy access/error log.
+job-info.01:
+    Logs: "yes"
+    comments: |
+            fluentd reads from /var/log/docker on the host previously configured, and export the events to bigquery and sqs to be consumed bigquery
+            another service, also we have fluentd that sends out docker container logs to elasticsearch.
+job-outgoing-feed-perl-api.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+job-performance.01:
+    Logs: "no"
+    comments: |
+        - NO docker container logs - it is empty
+        - NO haproxy access/error log.
+jobtitle-sanitization-service:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - NO Haproxy access/error log.
+locations.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+mail-validation.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+newrelic-c-daemon.01:
+    Logs: "no"
+    comments: |
+        - docker container logs empty
+pfp.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+photo.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+profile-alert-prediction.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+prs.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+qrcode-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+search-training-service-eval.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+search-training-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+seniority-classifier.01:
+    Logs: "no"
+    comments: |
+        - no logs - docker container logs empty
+snowplow-collector-proxy.01:
+    Logs: "no"
+    comments: |
+        - no logs - docker container logs empty
+spellchecker.01:
+    Logs: "yes"
+    comments: |
+        - NO docker container logs - it is EMPTY
+        - Haproxy access/error log.
+tableau-user.01:
+    Logs: "yes"
+    comments: |
+        - NO docker container logs - it is EMPTY
+        - Haproxy access/error log.
+www.01:
+    Logs: "yes"
+    comments: |
+        - docker container logs that ends up in elasticsearch docker-index index
+        - Haproxy access/error log.
+        - fluentd - events to bigquery
