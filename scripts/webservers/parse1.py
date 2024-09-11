@@ -102,6 +102,16 @@ for line in list1:
                     print(f"           {line.strip()}")
             else:
                 print("    Nagios: NO")
+    for key, value in formated_list5.items():
+        if key == service_name:
+            if re.match(r"(?i)yes", value['Logs']):
+                
+                print("    Logs: YES")
+                print("        comments:")
+                for line in value['comments'].splitlines():
+                    print(f"           {line.strip()}")
+            else:
+                print("    Logs: NO")
             
     print("    Dashboards: []")
     print("    Metrics: []")
