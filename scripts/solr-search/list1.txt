@@ -1,0 +1,16 @@
+solr72-jobs-backfill                     {"8983/tcp":[{"HostIp":"","HostPort":"8100"}]}
+solr45-requests                          {"8080/tcp":[{"HostIp":"","HostPort":"8089"}]}
+solr45-trial-requests                    {"8080/tcp":[{"HostIp":"","HostPort":"8092"}]}
+solr45-tasks                             {"8080/tcp":[{"HostIp":"","HostPort":"8093"}]}
+solr45-geo                               {"8080/tcp":[{"HostIp":"","HostPort":"8084"}]}
+solr45-accounts-notes                    {"8080/tcp":[{"HostIp":"","HostPort":"8094"}]}
+solr45-accounts                          {"8080/tcp":[{"HostIp":"","HostPort":"8090"}]}
+solr45-account-requests                  {"8080/tcp":[{"HostIp":"","HostPort":"8091"}]}
+solr72-candidates                        {"8983/tcp":[{"HostIp":"","HostPort":"8101"}]}
+solr72-trial-searches                    {"8983/tcp":[{"HostIp":"","HostPort":"8105"}]}
+solr72-salaries                          {"8983/tcp":[{"HostIp":"","HostPort":"8104"}]}
+solr72-jobtitles                         {"8983/tcp":[{"HostIp":"","HostPort":"8087"}]}
+solr72-companies                         {"8983/tcp":[{"HostIp":"","HostPort":"8103"}]}
+solr72-builder-dict                      {"8983/tcp":[{"HostIp":"","HostPort":"8102"}]}
+solr72-addresses                         {"8983/tcp":[{"HostIp":"","HostPort":"8098"}]}
+solr72-jobs                              {"8983/tcp":[{"HostIp":"","HostPort":"8097"}]}

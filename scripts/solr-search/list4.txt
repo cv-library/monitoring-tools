@@ -1,0 +1,64 @@
+solr72-jobs-backfill:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-requests:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-trial-requests:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-tasks:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-geo:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-accounts-notes:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-accounts:
+    Nagios: "yes"
+    comments: |
+        - 
+solr45-account-requests:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-candidates:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-trial-searches:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-salaries:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-jobtitles:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-companies:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-builder-dict:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-addresses:
+    Nagios: "yes"
+    comments: |
+        - 
+solr72-jobs:
+    Nagios: "yes"
+    comments: |
+        - 

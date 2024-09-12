@@ -1,0 +1,32 @@
+solr72-jobs-backfill:
+  SQS: []
+solr45-requests:
+  SQS: []
+solr45-trial-requests:
+  SQS: []
+solr45-tasks:
+  SQS: []
+solr45-geo:
+  SQS: []
+solr45-accounts-notes:
+  SQS: []
+solr72-candidates:
+  SQS: []
+solr45-accounts:
+  SQS: []
+solr45-account-requests:
+  SQS: []
+solr72-trial-searches:
+  SQS: []
+solr72-salaries:
+  SQS: []
+solr72-jobtitles:
+  SQS: []
+solr72-companies:
+  SQS: []
+solr72-builder-dict:
+  SQS: []
+solr72-addresses:
+  SQS: []
+solr72-jobs:
+  SQS: []
