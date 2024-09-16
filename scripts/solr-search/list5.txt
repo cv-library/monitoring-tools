@@ -1,64 +1,64 @@
 solr72-jobs-backfill:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-requests:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-trial-requests:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-tasks:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-geo:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-accounts-notes:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-accounts:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr45-account-requests:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-candidates:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-trial-searches:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-salaries:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-jobtitles:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-companies:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-builder-dict:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-addresses:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
 solr72-jobs:
     Logs: "yes"
     comments: |
-        - 
+        - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.

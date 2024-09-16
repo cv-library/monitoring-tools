@@ -1,64 +1,80 @@
 solr72-jobs-backfill:
     Nagios: "yes"
     comments: |
-        - 
+        - solr_error_solr72_jobs-backfill -> check_logfiles script against its docker container log file.
+        - Solr port jobs-backfill -> check_tcp script to the port 8100 from monitor servers
+        - Solr log output is recent -> check_file_age script against /var/log/docker/solr72_jobs-backfill.log
 solr45-requests:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port requests -> check_tcp script to the port 8089 from monitor servers
 solr45-trial-requests:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port trial-requests -> check_tcp script to the portt 8092 from monitor servers
+        - solr_error_trial-requests -> check_logfiles script against its docker container log file.
 solr45-tasks:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port tasks -> check_tcp script to the port 8093 from monitor servers
+        - solr_error_tasks -> check_logfiles script against its docker container log file.
 solr45-geo:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port geo -> check_tcp script to the port 8084 from monitor servers
+        - solr_error_geo -> check_logfiles script against its docker container log file.
 solr45-accounts-notes:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port accounts-notes -> check_tcp script to the port 8094 from monitor servers
+        - solr_error_accounts-notes -> check_logfiles script against its docker container log file.
 solr45-accounts:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port accounts -> check_tcp script to the port 8090 from monitor servers
+        - solr_error_accounts -> check_logfiles script against its docker container log file.
+        - Solr Accounts Core Freshness -> script /usr/local/lib/nagios/plugins/check_solr45_index_freshness runnning from monitor servers. it passes
+          accounts as an argument and connects to the microservice on the port 8090 to check documents to jobs and candidates cores.
+        - Solr Accounts Core Freshness OOH -> heck_solr45_index_freshness_sf -> same above + using a state file to make checks for up to 3 sequential checks
 solr45-account-requests:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port account-requests -> check_tcp script to the port 8091 from monitor servers
+        - solr_error_account-requests -> check_logfiles script against its docker container log file.
 solr72-candidates:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port candidates -> check_tcp script to the port 8101 from monitor servers
+        - solr_error_solr72_candidates -> check_logfiles script against its docker container log file.
+        - Solr Candidates Core Freshness -> script check_solr7_index_freshness runnning from monitor servers. it passes
+          candidates as an argument and connects to the microservice on the port 8090 to check documents to jobs and candidates cores.
+        - Solr Candidates Core Freshness OOH -> check_solr45_index_freshness_sf -> same above  with check_period = nonworkhours
 solr72-trial-searches:
-    Nagios: "yes"
+    Nagios: "no"
     comments: |
-        - 
+        - no checks for this microservice.
 solr72-salaries:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port salaries -> check_tcp script to the port 8104 from monitor servers
 solr72-jobtitles:
     Nagios: "yes"
     comments: |
-        - 
+        - solr_error_solr72_jobtitles -> check_logfiles script against its docker container log file.
 solr72-companies:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port companies -> check_tcp script to the port 8103 from monitor servers
+        - solr_error_solr72_companies -> check_logfiles script against its docker container log file.
 solr72-builder-dict:
-    Nagios: "yes"
+    Nagios: "no"
     comments: |
-        - 
+        - No checks for this microservice.
 solr72-addresses:
     Nagios: "yes"
     comments: |
-        - 
+        - solr_error_solr72_addresses ->check_logfiles script against its docker container log file.
 solr72-jobs:
     Nagios: "yes"
     comments: |
-        - 
+        - Solr port jobs -> check_tcp script to the port 8097 from monitor servers

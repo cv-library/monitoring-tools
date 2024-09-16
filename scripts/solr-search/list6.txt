@@ -3,62 +3,62 @@ solr72-jobs-backfill:
     comments: |
         - 
 solr45-requests:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-trial-requests:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-tasks:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-geo:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-accounts-notes:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-accounts:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr45-account-requests:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-candidates:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-trial-searches:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-salaries:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-jobtitles:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-companies:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-builder-dict:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-addresses:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 
 solr72-jobs:
-    Logs: "yes"
+    Dashboard "yes"
     comments: |
         - 

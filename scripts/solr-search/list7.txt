@@ -1,62 +1,124 @@
 search04:
     Nagios: "yes"
     nagios_comments: |
-        - cron service (check if service is running)
+        - APT -> script check_apt (the script will return OK if there is no critical updates)
+        - BBU -> check_logical_drive script that returns megaCli64 state output command
+        - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+        - Disk space alerts -> same as above
+        - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+        - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+        - Ping -> icmp check from monitor check.
+        - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+        - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+        - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+        - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+        - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+        - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+        - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
     Dashboard: "yes"
     dashboard_comments: |
-        - solr dashboard performance
+        - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
 
 search05:
     Nagios: "yes"
     nagios_comments: |
-        - cron service (check if service is running)
+        - APT -> script check_apt (the script will return OK if there is no critical updates)
+        - BBU -> check_logical_drive script that returns megaCli64 state output command
+        - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+        - Disk space alerts -> same as above
+        - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+        - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+        - Ping -> icmp check from monitor check.
+        - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+        - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+        - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+        - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+        - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+        - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+        - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
     Dashboard: "yes"
     dashboard_comments: |
-        - solr dashboard performance
+        - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
 
 search06:
     Nagios: "yes"
     nagios_comments: |
-        - cron service (check if service is running)
+        - APT -> script check_apt (the script will return OK if there is no critical updates)
+        - BBU -> check_logical_drive script that returns megaCli64 state output command
+        - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+        - Disk space alerts -> same as above
+        - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+        - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+        - Ping -> icmp check from monitor check.
+        - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+        - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+        - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+        - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+        - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+        - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+        - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
     Dashboard: "yes"
     dashboard_comments: |
-        - solr dashboard performance
-
+        - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
 search07:
-    Nagios: "yes"
+    Nagios: "no"
     nagios_comments: |
-        - cron service (check if service is running)
-    Dashboard: "yes"
+        - No nagios in place for this server
+    Dashboard: "no"
     dashboard_comments: |
-        - solr dashboard performance
-
+        - no dashboard for this server
 search08:
-    Nagios: "yes"
+    Nagios: "no"
     nagios_comments: |
-        - cron service (check if service is running)
-    Dashboard: "yes"
+        - No nagios in place for this server
+    Dashboard: "no"
     dashboard_comments: |
-        - solr dashboard performance
-
+        - no dashboard for this server
 search09:
-    Nagios: "yes"
+    Nagios: "no"
     nagios_comments: |
-        - cron service (check if service is running)
-    Dashboard: "yes"
+        - No nagios in place for this server
+    Dashboard: "no"
     dashboard_comments: |
-        - solr dashboard performance
+        - no dashboard for this server
 search10:
     Nagios: "yes"
     nagios_comments: |
-        - cron service (check if service is running)
+        - APT -> script check_apt (the script will return OK if there is no critical updates)
+        - BBU -> check_logical_drive script that returns megaCli64 state output command
+        - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+        - Disk space alerts -> same as above
+        - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+        - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+        - Ping -> icmp check from monitor check.
+        - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+        - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+        - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+        - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+        - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+        - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+        - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
     Dashboard: "yes"
     dashboard_comments: |
-        - solr dashboard performance
+        - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
 
 search11:
     Nagios: "yes"
     nagios_comments: |
-        - cron service (check if service is running)
+        - APT -> script check_apt (the script will return OK if there is no critical updates)
+        - BBU -> check_logical_drive script that returns megaCli64 state output command
+        - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+        - Disk space alerts -> same as above
+        - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+        - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+        - Ping -> icmp check from monitor check.
+        - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+        - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+        - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+        - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+        - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+        - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+        - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
     Dashboard: "yes"
     dashboard_comments: |
-        - solr dashboard performance
+        - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
