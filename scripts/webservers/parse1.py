@@ -96,22 +96,22 @@ for line in list1:
         if key == service_name:
             if re.match(r"(?i)yes", value['Nagios']):
                 nagios_yes = True
-                print("    Nagios: YES")
-                print("        comments: |")
+                print("    Nagios: \"YES\"")
+                print("    nagios_comments: |")
                 for line in value['comments'].splitlines():
                     print(f"           {line.strip()}")
             else:
-                print("    Nagios: NO")
+                print("    Nagios: \"NO\"")
     for key, value in formated_list5.items():
         if key == service_name:
             if re.match(r"(?i)yes", value['Logs']):
                 
-                print("    Logs: YES")
-                print("        comments: |")
+                print("    Logs: \"YES\"")
+                print("    log_comments: |")
                 for line in value['comments'].splitlines():
                     print(f"           {line.strip()}")
             else:
-                print("    Logs: NO")
+                print("    Logs: \"NO\"")
             
     print("    Dashboards: []")
     print("    Metrics: []")
@@ -137,12 +137,12 @@ for line in list1:
 for key, value in formated_list7.items():
     print(f"{key}:")
     if re.match(r"(?i)yes", value['Nagios']):
-        print("    Nagios: YES")
-        print("        comments: |")
+        print("    Nagios: \"YES\"")
+        print("    nagios_comments: |")
         for line in value['nagios_comments'].splitlines():
             print(f"           {line.strip()}")
     if re.match(r"(?i)yes", value['Dashboard']):
         print("    Dashboards: YES")
-        print("        comments: |")
+        print("    dashboard_comments: |")
         for line in value['dashboard_comments'].splitlines():
             print(f"           {line.strip()}")

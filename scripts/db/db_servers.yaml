@@ -1,0 +1,81 @@
+db04:
+    Nagios: "YES"
+    nagios_comments: |
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - load night (load 1, 5, 15 min) - check_load script -> with check_period (mysql_load_night OOH)
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Memory Usage -> passive check using munin snmp OID memory values
+           - PING - icmp check from monitor servers
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Users (check_users command) returns the users currently logged in
+           - autokill - Passive check running from monitor servers (receiving by nsca agent)
+           - mysql active threads -> /usr/lib64/nagios/plugins/check_mysql_query passing password, user, dbname and the query to list all the process wrapped up in a count function
+           - mysql copying tmp tables -> exactly the same thing above, identical query and command.
+           - mysql locks -> /usr/lib64/nagios/plugins/check_mysql_query -> passing the arguments (user,pass,dbname, query to list the process list where state %lock%)
+           - mysql long processes -> /usr/local/lib/nagios/plugins/check_mysql_long_procs -> passing the arguments (user,pass,dbname)
+           - mysqld process -> /usr/lib64/nagios/plugins/check_procs script with argument -C mysqld (returns OK if mysqld process is running)
+db05:
+    Nagios: "YES"
+    nagios_comments: |
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Candidate Multi Apply -> /usr/lib64/nagios/plugins/check_mysql_query script with args (user, pass, dbname and query to count rows that is older than 30 min from the current time)
+           - Check Exchange Rates -> /usr/lib64/nagios/plugins/check_mysql_query script with args (user, pass, dbname and query to tell how many sec passed since last timestamp in exchange rate table)
+           - Competitor Stats -> /usr/local/lib/nagios/plugins/check_competitor_stats script that query mysqldb and check if: (1 Competitor job has or not been stored in past day, 2 has changed in poast four days, 3 has changed in past two days)
+           - Iterable - allocate campaign users -> /usr/lib64/nagios/plugins/check_mysql_query script with args (user, pass, dbname and query to tell number of rows in the itarable tcampaign send limits table where the day is set to tomorrow's date is = va;ues of done fields))
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - MYSQL_SLAVE -> /usr/lib64/nagios/plugins/check_mysql script that checks the state of the slave node.
+           - Memory Usage -> passive check using munin snmp OID memory values
+           - PING - icmp check from monitor servers
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Smartmatch Processed -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the number of rows in Smartmatch_candidate_queue table have a processed timestamp within the last 15 minutes
+           - Smartmatch Processed OOH -> very same thing above, but check_period = OOH
+           - Smartmatch Requested -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the number of rows in Smartmatch_candidate_queue table have a requested column timestamp within the last 15 minutes
+           - Users (check_users command) returns the users currently logged in
+           - Smartmatch Requested OOH -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the number of rows in Smartmatch_candidate_queue table have a requested column timestamp within the last 15 minutes
+           - Unexpired jobs ->  /usr/lib64/nagios/plugins/check_mysql_query script with the query that (probably) show the recent activity older than 62 days and accounts that expire within 62 days or less for the agencies.
+           - Watchdog Log Last 24 Hours -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the rows in the log table that have a timestamp value within the last 24 hours)
+           - Watchdog Queue Old Entries -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that  counts the rows in the queue table that have a timestamp value older than 1 hour
+           - auto-registration not recent - cvsubapi -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the rows in the completed entries were processed in the past 4 hours.
+           - auto-registration unprocessed - agencycentral -> /usr/lib64/nagios/plugins/check_mysql_query script with the query that counts the rows of the incomplete tasks or entries from the last 24 hours (completed=0)
+           - auto-registration unprocessed - cvsubapi -> same above, but with the table cvsubapi
+           - autokill - Passive check running from monitor servers (receiving by nsca agent)
+           - mysql active threads -> /usr/lib64/nagios/plugins/check_mysql_query passing password, user, dbname and the query to list all the process wrapped up in a count function
+           - mysql copying tmp tables -> exactly the same thing above, identical query and command.
+           - mysql locks -> /usr/lib64/nagios/plugins/check_mysql_query -> passing the arguments (user,pass,dbname, query to list the process list where state %lock%)
+           - mysql long processes -> /usr/local/lib/nagios/plugins/check_mysql_long_procs -> passing the arguments (user,pass,dbname)
+           - mysqld process -> /usr/lib64/nagios/plugins/check_procs script with argument -C mysqld (returns OK if mysqld process is running)
+           - reporting -> /usr/local/lib/nagios/plugins/check_reporting script that returns daily jbe and mobile application stats (if they were updated)
+db06:
+    Nagios: "YES"
+    nagios_comments: |
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Backup lock file exists -> /usr/local/lib/nagios/plugins/check_file_exists_glob script that checks the existence of a file (/tmp mysql_innobackupex_running)
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - load night (load 1, 5, 15 min) - check_load script -> with check_period (mysql_load_night OOH)
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Memory Usage -> passive check using munin snmp OID memory values
+           - MYSQL_SLAVE -> /usr/lib64/nagios/plugins/check_mysql script that checks the state of the slave node.
+           - MySQL Slaving Problem -> /usr/local/lib/nagios/plugins/check_mysql_slaving_issues script that returns SHOW SLAVE STATUS query output
+           - PING - icmp check from monitor servers
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Users (check_users command) returns the users currently logged in
+           - autokill - Passive check running from monitor servers (receiving by nsca agent)
+           - database field exhaustion -> PASSIVE check using external ds nsca.
+           - innobackupex backup -> check_dummy script running from monnitor servers
+           - mysql active threads -> /usr/lib64/nagios/plugins/check_mysql_query passing password, user, dbname and the query to list all the process wrapped up in a count function
+           - mysql copying tmp tables -> exactly the same thing above, identical query and command.
+           - mysql locks -> /usr/lib64/nagios/plugins/check_mysql_query -> passing the arguments (user,pass,dbname, query to list the process list where state %lock%)
+           - mysql long processes -> /usr/local/lib/nagios/plugins/check_mysql_long_procs -> passing the arguments (user,pass,dbname)
+           - mysqld process -> /usr/lib64/nagios/plugins/check_procs script with argument -C mysqld (returns OK if mysqld process is running)
+           - mysqldump backup over network -> metrics from NSCA client.

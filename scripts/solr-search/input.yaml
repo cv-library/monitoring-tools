@@ -1,0 +1,435 @@
+solr72-jobs-backfill:
+    Nagios: "YES"
+    nagios_comments: |
+           - solr_error_solr72_jobs-backfill -> check_logfiles script against its docker container log file.
+           - Solr port jobs-backfill -> check_tcp script to the port 8100 from monitor servers
+           - Solr log output is recent -> check_file_age script against /var/log/docker/solr72_jobs-backfill.log
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-jobs-backfill"
+        bind_port: "9061"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8100"
+    haproxy:
+        listen: "solr-jobs-backfill-long"
+        bind_port: "9062"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8100"
+    host_port: "8100"
+
+
+
+solr45-requests:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port requests -> check_tcp script to the port 8089 from monitor servers
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8089"
+
+
+
+solr45-trial-requests:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port trial-requests -> check_tcp script to the portt 8092 from monitor servers
+           - solr_error_trial-requests -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8092"
+
+
+
+solr45-tasks:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port tasks -> check_tcp script to the port 8093 from monitor servers
+           - solr_error_tasks -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "qrcodes"
+        bind_port: "9019"
+        httpchk: "GET /solr45/requests/select?q=document_id:0"
+        servers: ['app01', 'app02', 'app04', 'app05', 'search04', 'search04-8093', 'search05-8093', 'search06-8093', 'search04-8092', 'search05-8092', 'search06-8092', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search04-8093', 'search05-8093', 'search06-8093', 'search04-8092', 'search05-8092', 'search06-8092', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06']
+        port_target: "8093"
+    host_port: "8093"
+
+
+
+solr45-geo:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port geo -> check_tcp script to the port 8084 from monitor servers
+           - solr_error_geo -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8084"
+
+
+
+solr45-accounts-notes:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port accounts-notes -> check_tcp script to the port 8094 from monitor servers
+           - solr_error_accounts-notes -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8094"
+
+
+
+solr45-accounts:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port accounts -> check_tcp script to the port 8090 from monitor servers
+           - solr_error_accounts -> check_logfiles script against its docker container log file.
+           - Solr Accounts Core Freshness -> script /usr/local/lib/nagios/plugins/check_solr45_index_freshness runnning from monitor servers. it passes
+           accounts as an argument and connects to the microservice on the port 8090 to check documents to jobs and candidates cores.
+           - Solr Accounts Core Freshness OOH -> heck_solr45_index_freshness_sf -> same above + using a state file to make checks for up to 3 sequential checks
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8090"
+
+
+
+solr45-account-requests:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port account-requests -> check_tcp script to the port 8091 from monitor servers
+           - solr_error_account-requests -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    host_port: "8091"
+
+
+
+solr72-candidates:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port candidates -> check_tcp script to the port 8101 from monitor servers
+           - solr_error_solr72_candidates -> check_logfiles script against its docker container log file.
+           - Solr Candidates Core Freshness -> script check_solr7_index_freshness runnning from monitor servers. it passes
+           candidates as an argument and connects to the microservice on the port 8090 to check documents to jobs and candidates cores.
+           - Solr Candidates Core Freshness OOH -> check_solr45_index_freshness_sf -> same above  with check_period = nonworkhours
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-candidates"
+        bind_port: "9072"
+        httpchk: "GET /solr/candidates/select?q=id:0"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8101"
+    haproxy:
+        listen: "solr-candidates-long"
+        bind_port: "9073"
+        httpchk: "GET /solr/candidates/select?q=id:0"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8101"
+    host_port: "8101"
+
+
+
+solr72-trial-searches:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-trial-searches"
+        bind_port: "9100"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8105"
+    haproxy:
+        listen: "solr-trial-searches-long"
+        bind_port: "9101"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8105"
+    host_port: "8105"
+
+
+
+solr72-salaries:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port salaries -> check_tcp script to the port 8104 from monitor servers
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-salaries"
+        bind_port: "9083"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8104"
+    host_port: "8104"
+
+
+
+solr72-jobtitles:
+    Nagios: "YES"
+    nagios_comments: |
+           - solr_error_solr72_jobtitles -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-jobtitles"
+        bind_port: "9064"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8087"
+    haproxy:
+        listen: "solr-jobtitles-long"
+        bind_port: "9065"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8087"
+    host_port: "8087"
+
+
+
+solr72-companies:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port companies -> check_tcp script to the port 8103 from monitor servers
+           - solr_error_solr72_companies -> check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-companies"
+        bind_port: "9079"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06']
+        port_target: "8103"
+    host_port: "8103"
+
+
+
+solr72-builder-dict:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-bool-builder-dict"
+        bind_port: "9075"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8102"
+    host_port: "8102"
+
+
+
+solr72-addresses:
+    Nagios: "YES"
+    nagios_comments: |
+           - solr_error_solr72_addresses ->check_logfiles script against its docker container log file.
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-addresses"
+        bind_port: "9054"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8098"
+    haproxy:
+        listen: "solr-addresses-long"
+        bind_port: "9057"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8098"
+    host_port: "8098"
+
+
+
+solr72-jobs:
+    Nagios: "YES"
+    nagios_comments: |
+           - Solr port jobs -> check_tcp script to the port 8097 from monitor servers
+    Logs: "YES"
+    log_comments: |
+           - docker container Logs in /var/log/docker/<container_name>.log. it is just logging to syslog, and the logs do not end up anywhere rather than locally.
+    Dashboards: []
+    Metrics: []
+    SQS: NO
+    haproxy:
+        listen: "solr-jobs-v72"
+        bind_port: "9055"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8097"
+    haproxy:
+        listen: "solr-jobs-v72-long"
+        bind_port: "9056"
+        httpchk: "None"
+        servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+        port_target: "8097"
+    host_port: "8097"
+
+
+
+search04:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+           - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+           - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
+    Dashboards: YES
+    dashboard_comments: |
+           - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
+search05:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+           - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+           - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
+    Dashboards: YES
+    dashboard_comments: |
+           - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
+search06:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+           - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+           - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
+    Dashboards: YES
+    dashboard_comments: |
+           - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
+search07:
+search08:
+search09:
+search10:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+           - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+           - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
+    Dashboards: YES
+    dashboard_comments: |
+           - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
+search11:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall -> check_shorewall script, it returns OK if firewall shorewall service is active and running
+           - Solr collection size -> /usr/local/lib/nagios/plugins/check_solr_collection_size script that returns the largest collection across all shards (replicas or not)
+           - Solr collections re-indexed -> check_solr_alias_recent script that returns OK if indexed and aliased not too old
+    Dashboards: YES
+    dashboard_comments: |
+           - solr dashboard performance (Server Load Average, CPU Load, CPU Time, Open Files, )
