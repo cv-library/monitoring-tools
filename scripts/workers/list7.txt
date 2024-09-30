@@ -30,7 +30,7 @@ worker01:
         - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
         - Shorewall (check_shorewall command) - return if firewall whether is running or not
         - Users (check_users command) returns the users currently logged in
-        - access_key error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors 
+        - access_llave error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors 
         - clamav signature freshness -> /usr/local/lib/nagios/plugins/check_clamav_signatures script that checks the last time the virus signature has been updated
         - clamav virus found -> /usr/local/lib/nagios/plugins/check_logfiles scrip that checks for any virus found against /var/log/docker/clamav.log
         - clamav virus test -> /usr/local/lib/nagios/plugins/check_clamav_virustest script running from monitor servers which will test the antivirus.
@@ -90,7 +90,7 @@ worker02:
         - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
         - Shorewall (check_shorewall command) - return if firewall whether is running or not
         - Users (check_users command) returns the users currently logged in
-        - access_key error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors 
+        - access_llave error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors 
         - clamav signature freshness -> /usr/local/lib/nagios/plugins/check_clamav_signatures script that checks the last time the virus signature has been updated
         - clamav virus found -> /usr/local/lib/nagios/plugins/check_logfiles scrip that checks for any virus found against /var/log/docker/clamav.log
         - clamav virus test -> /usr/local/lib/nagios/plugins/check_clamav_virustest script running from monitor servers which will test the antivirus.
