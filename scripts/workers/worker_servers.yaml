@@ -1,0 +1,2239 @@
+solr-index-candidates-failed:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_cvol-unfinished-registrations.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_snowplow-offline-event-processor.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_process-report-email-queue.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-jobs-via-sqs.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_persist-iterable-settings.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time-queue-populator.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.08:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.07:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.06:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.05:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.04:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.03:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.02:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_watchdog-real-time.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_stat-and-report-queue-processor.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_stat-and-report-queue-processor.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_stat-and-report-queue-processor.01:
+    Nagios: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates-low-pri.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates-low-pri.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates-low-pri.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates-low-pri.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_solr-index-candidates.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_smartmatch-newjobs.01:
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_send-push-alerts.05:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_send-push-alerts.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_send-push-alerts.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_send-push-alerts.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_send-push-alerts.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_recommend-jbe-selector.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-modify-event.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.06:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.05:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-job-view-processor.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_pfp-budget-threshold.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_google-job-indexer-sqs-cvl-ie.01:
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_google-job-indexer-sqs-cvl-uk.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_job-geo-processor.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_external-url-checker.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_event-processor.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_set-candidate-postcode.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_daxtra-cv-parsing.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-timeslot-sender-sqs-london.05:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-timeslot-sender-sqs-london.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-timeslot-sender-sqs-london.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-timeslot-sender-sqs-london.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-timeslot-sender-sqs-london.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.30:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.29:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.28:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.27:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.26:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.25:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.24:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.23:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.22:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.21:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.20:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.19:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.18:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.17:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.16:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.15:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.14:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.13:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.12:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.11:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.10:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.09:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.08:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.07:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.06:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.05:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_jbe-default-timeslot-sender.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_candidate-partial-registration-emailer.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_candidate-industry-prediction.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.10:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.09:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.08:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.07:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.06:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.05:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.04:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.03:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.02:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+cvl-platform-task_brand-cvs.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.12:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.11:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.10:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.09:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.08:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.07:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.06:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.05:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.04:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.03:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.02:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+bot-or-not.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+update-seo-location:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+send_web_push_notifications-morning:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+doc-service-worker.10:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.09:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.08:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.07:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.06:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.05:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.04:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.03:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.02:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+doc-service-worker.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+job-deleter.03:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+job-deleter.02:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+job-deleter.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+pfp-report-event-processor.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+pfp-event-processor.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+doc-convert-service.02:
+    Nagios: "YES"
+    nagios_comments: |
+           - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+doc-convert-service.01:
+    Nagios: "YES"
+    nagios_comments: |
+           - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    
+
+
+
+profile-industry-prediction-tensorflow.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    
+
+
+
+cvl-platform-task_mail-processor.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    host_port: "10025"
+
+
+
+job-classification-data.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5055"
+
+
+
+job-info.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    haproxy:
+        listen: "job-info"
+        bind_port: "9088"
+        httpchk: "GET /health"
+        servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+        port_target: "5040"
+    host_port: "5040"
+
+
+
+duplicate-job-search-endpoint.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5049"
+
+
+
+jbe-search-endpoint.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5045"
+
+
+
+job-connector.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    haproxy:
+        listen: "job-connector"
+        bind_port: "9106"
+        httpchk: "GET /v1/health"
+        servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+        port_target: "5056"
+    host_port: "5056"
+
+
+
+jbe-search-aggregator.01:
+    Nagios: "YES"
+    nagios_comments: |
+           - JBE Search Aggregator ->        /usr/lib/nagios/plugins/check_http script that checks a http endpoint (http://localhost:5043/health)
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5043"
+
+
+
+locations.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    haproxy:
+        listen: "locations"
+        bind_port: "9014"
+        httpchk: "HEAD /"
+        servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+        port_target: "5004"
+    host_port: "5004"
+
+
+
+daxtra-proxy.01:
+    Nagios: "YES"
+    nagios_comments: |
+           - daxtra-proxy -> check_http_port_health (tcp check against port 5041)
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5041"
+
+
+
+job-classification.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    haproxy:
+        listen: "classify"
+        bind_port: "9013"
+        httpchk: "HEAD /"
+        servers: ['app01', 'app02', 'app04', 'app05']
+        port_target: "5002"
+    host_port: "5002"
+
+
+
+sqs-relay.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5039"
+
+
+
+docker-proxy:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01']
+    haproxy:
+        listen: "ceph-radosgw"
+        bind_port: "9044"
+        httpchk: "HEAD /"
+        servers: ['store01', 'store02', 'store03']
+        port_target: "80"
+    host_port: "80"
+
+
+
+fluentd.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "2424"
+
+
+
+clamav:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - docker container log file (stdout and strerr)
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "3310"
+
+
+
+synonym-service.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    haproxy:
+        listen: "synonym-service"
+        bind_port: "9063"
+        httpchk: "HEAD /auth/login/"
+        servers: ['worker01', 'worker02']
+        port_target: "5000"
+    host_port: "5000"
+
+
+
+rocketchat:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    haproxy:
+        listen: "rocketchat"
+        bind_port: "9066"
+        httpchk: "HEAD /"
+        servers: ['worker02']
+        port_target: "3000"
+    host_port: "3000"
+
+
+
+mongo:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    host_port: "27017"
+
+
+
+search-training-service.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    haproxy:
+        listen: "search-training-service"
+        bind_port: "9067"
+        httpchk: "HEAD /"
+        servers: ['app01', 'app02', 'app04', 'app05']
+        port_target: "5027"
+    host_port: "5027"
+
+
+
+sqs-relay.01:
+    Nagios: "NO"
+    Logs: "YES"
+    log_comments: |
+           - HAproxy access log
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5039"
+
+
+
+redis_redis-cluster_1:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker02']
+    host_port: "7116"
+
+
+
+job-classification-data.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "5055"
+
+
+
+fluentd.01:
+    Nagios: "NO"
+    Logs: "NO"
+    Dashboards: []
+    Metrics: []
+    HostServers: ['worker01', 'worker02']
+    host_port: "2424"
+
+
+
+worker01:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Fluentd buffers -> /usr/local/lib/nagios/plugins/check_fluentd_buffers script that checks the datastream that is being sent within a time range
+           - JBE MEMCACHED initialisation failed -> /usr/local/lib/nagios/plugins/check_logfiles script that check for errors against /var/log/docker/jobs-by-email-service.0[34].log logs.
+           - JBE Search Aggregator ->        /usr/lib/nagios/plugins/check_http script that checks a http endpoint (http://localhost:5043/health)
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Monit -> /usr/local/lib/nagios/plugins/check_monit script that checks if monit is being monitored
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-bulk-british-jobs -> /usr/local/lib/nagios/plugins/check_postfix_queue script with  -i argment postfix-bulk-british-jobs and it returns if the postfix-bulk-british-jobs queue incoming is OK
+           - Postfix Queue postfix-bulk-resume-library -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i argment postfix-bulk-resume-library and it returns if the postfix-bulk-resume-library queue incoming is OK
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SMTP_2527 -> run check_smtp command from monitor servers passing the port 2527
+           - SMTP_2528 -> run check_smtp command from monitor servers passing the port 2528
+           - SQS-Relay -> /usr/lib/nagios/plugins/check_http against localhost:5039/health
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Users (check_users command) returns the users currently logged in
+           - access_key error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors
+           - clamav signature freshness -> /usr/local/lib/nagios/plugins/check_clamav_signatures script that checks the last time the virus signature has been updated
+           - clamav virus found -> /usr/local/lib/nagios/plugins/check_logfiles scrip that checks for any virus found against /var/log/docker/clamav.log
+           - clamav virus test -> /usr/local/lib/nagios/plugins/check_clamav_virustest script running from monitor servers which will test the antivirus.
+           - daxtra-proxy -> check_http_port_health (tcp check against port 5041)
+           - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity
+           - docker duplicated ports (check_docker_dup_ports command)
+           - docker process running (check_docker_procs command)
+           - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+           - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+           - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+           - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+           - ipconntrack table -> /usr/local/lib/nagios/plugins/check_ipconntrack script which will check that the ip_conntrack table isn't full
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+worker01-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+worker02:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk space -> /usr/lib/nagios/plugins/check_disk script with the args (/, /var and /srv)
+           - Disk space alerts -> same as above
+           - Fluentd buffers -> /usr/local/lib/nagios/plugins/check_fluentd_buffers script that checks the datastream that is being sent within a time range
+           - JBE MEMCACHED initialisation failed -> /usr/local/lib/nagios/plugins/check_logfiles script that check for errors against /var/log/docker/jobs-by-email-service.0[34].log logs.
+           - JBE Search Aggregator ->        /usr/lib/nagios/plugins/check_http script that checks a http endpoint (http://localhost:5043/health)
+           - Load -> /usr/lib/nagios/plugins/check_load script and it returns 1  min, 5 min and 15 minutes average
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Ping -> icmp check from monitor check.
+           - Monit -> /usr/local/lib/nagios/plugins/check_monit script that checks if monit is being monitored
+           - Postfix -> check_procs scripts with the argument master -> it returns OK if postfix master process is running
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-bulk-british-jobs -> /usr/local/lib/nagios/plugins/check_postfix_queue script with  -i argment postfix-bulk-british-jobs and it returns if the postfix-bulk-british-jobs queue incoming is OK
+           - Postfix Queue postfix-bulk-resume-library -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i argment postfix-bulk-resume-library and it returns if the postfix-bulk-resume-library queue incoming is OK
+           - Processes -> check_procs scripts with no argments and it returns the total processes running on the server
+           - Puppet Agent ( check_puppet_agent script ) it returns OK if puppet-agent is running
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SMTP_2527 -> run check_smtp command from monitor servers passing the port 2527
+           - SMTP_2528 -> run check_smtp command from monitor servers passing the port 2528
+           - SQS-Relay -> /usr/lib/nagios/plugins/check_http against localhost:5039/health
+           - RAID -> check_raid script -> it invokes megaCli raid state output. (state of the online disks/volumes)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Users (check_users command) returns the users currently logged in
+           - access_key error -> /usr/local/lib/nagios/plugins/check_logfiles script that checks against /var/log/docker/cvl-platform-task*.log files for any errors
+           - clamav signature freshness -> /usr/local/lib/nagios/plugins/check_clamav_signatures script that checks the last time the virus signature has been updated
+           - clamav virus found -> /usr/local/lib/nagios/plugins/check_logfiles scrip that checks for any virus found against /var/log/docker/clamav.log
+           - clamav virus test -> /usr/local/lib/nagios/plugins/check_clamav_virustest script running from monitor servers which will test the antivirus.
+           - daxtra-proxy -> check_http_port_health (tcp check against port 5041)
+           - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity
+           - docker duplicated ports (check_docker_dup_ports command)
+           - docker process running (check_docker_procs command)
+           - haproxy (check_haproxy command - tcp check from the host to haproxy servers)
+           - haproxy daemon  ( check_procs -C haproxy) if haproxy is running, it returns OK
+           - haproxy no server available ( check_logfiles script against /srv/log/haproxy.log on the host)
+           - haproxy timeout (check_logfiles script against /srv/log/haproxy.log )
+           - ipconntrack table -> /usr/local/lib/nagios/plugins/check_ipconntrack script which will check that the ip_conntrack table isn't full
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+worker02-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)

@@ -1,0 +1,598 @@
+cvl-platform-task_mail-processor.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+        - HAproxy access log
+job-classification-data.01:
+    Logs: "yes"
+    comments: |
+        - HA proxy access log
+job-info.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+        - HAproxy access log
+duplicate-job-search-endpoint.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+jbe-search-endpoint.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+job-connector.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+        - docker container log file (stdout and strerr)
+jbe-search-aggregator.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+locations.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+        - docker container log file (stdout and strerr)
+daxtra-proxy.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+        - docker container log file (stdout and strerr)
+job-classification.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+        - docker container log file (stdout and strerr)
+sqs-relay.01:
+    Logs: "yes"
+    comments: |
+        - HAproxy access log
+docker-proxy:
+    Logs: "no"
+    comments: |
+        - no access log
+fluentd.01:
+    Logs: "no"
+    comments: |
+        - no access log
+clamav:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+synonym-service.01:
+    Logs: "no"
+    comments: |
+        - 
+rocketchat:
+    Logs: "no"
+    comments: |
+        - docker container log file (stdout and strerr)
+mongo:
+    Logs: "no"
+    comments: |
+        - docker container log file (stdout and strerr)
+search-training-service.01:
+    Logs: "no"
+    comments: |
+        - 
+redis_redis-cluster_1:
+    Logs: "no"
+    comments: |
+        - 
+job-classification-data.01:
+    Logs: "no"
+    comments: |
+        - 
+solr-index-candidates-failed:
+    Logs: "no"
+    comments: |
+        - 
+profile-industry-prediction-tensorflow.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_cvol-unfinished-registrations.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+profile-industry-prediction-tensorflow.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_snowplow-offline-event-processor.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+profile-industry-prediction-tensorflow.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_process-report-email-queue.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-jobs-via-sqs.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_persist-iterable-settings.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time-queue-populator.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.08:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.07:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.06:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.05:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.04:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.03:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.02:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_watchdog-real-time.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_stat-and-report-queue-processor.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_stat-and-report-queue-processor.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_smartmatch-newjobs.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.05:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_recommend-jbe-selector.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-modify-event.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.06:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.05:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-budget-threshold.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_google-job-indexer-sqs-cvl-ie.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_google-job-indexer-sqs-cvl-uk.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_job-geo-processor.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_external-url-checker.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_event-processor.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_set-candidate-postcode.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_daxtra-cv-parsing.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_jbe-timeslot-sender-sqs-london.05:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.30:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.29:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.28:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.27:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.26:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.25:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.24:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.23:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.22:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.21:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.20:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.19:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.18:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.17:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.16:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.15:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.14:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.13:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.12:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.11:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.10:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.09:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.08:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.07:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.06:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.05:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.04:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.03:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.02:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.01:
+    Logs: "no"
+    comments: |
+        - 
+cvl-platform-task_candidate-partial-registration-emailer.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_candidate-industry-prediction.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.10:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.09:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.08:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.07:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.06:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.05:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.04:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.03:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.02:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+cvl-platform-task_brand-cvs.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+bot-or-not.12:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.11:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.10:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.09:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.08:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.07:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.06:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.05:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.04:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.03:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.02:
+    Logs: "no"
+    comments: |
+        - 
+bot-or-not.01:
+    Logs: "no"
+    comments: |
+        - 
+update-seo-location:
+    Logs: "no"
+    comments: |
+        - 
+send_web_push_notifications-morning:
+    Logs: "no"
+    comments: |
+        - 
+doc-service-worker.10:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.09:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.08:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.07:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.06:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.05:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.04:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.03:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.02:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-service-worker.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+job-deleter.03:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+job-deleter.02:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+job-deleter.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+pfp-report-event-processor.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+pfp-event-processor.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-convert-service.02:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)
+doc-convert-service.01:
+    Logs: "yes"
+    comments: |
+        - docker container log file (stdout and strerr)

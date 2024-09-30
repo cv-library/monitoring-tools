@@ -1,0 +1,588 @@
+cvl-platform-task_mail-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+job-classification-data.01:
+    Nagios: "no"
+    comments: |
+        - 
+job-info.01:
+    Nagios: "no"
+    comments: |
+        - 
+duplicate-job-search-endpoint.01:
+    Nagios: "no"
+    comments: |
+        - 
+jbe-search-endpoint.01:
+    Nagios: "no"
+    comments: |
+        - 
+job-connector.01:
+    Nagios: "no"
+    comments: |
+        - 
+jbe-search-aggregator.01:
+    Nagios: "yes"
+    comments: |
+        - JBE Search Aggregator ->        /usr/lib/nagios/plugins/check_http script that checks a http endpoint (http://localhost:5043/health)
+locations.01:
+    Nagios: "no"
+    comments: |
+        - 
+daxtra-proxy.01:
+    Nagios: "yes"
+    comments: |
+        - daxtra-proxy -> check_http_port_health (tcp check against port 5041)
+job-classification.01:
+    Nagios: "no"
+    comments: |
+        - 
+sqs-relay.01:
+    Nagios: "no"
+    comments: |
+        - 
+docker-proxy:
+    Nagios: "no"
+    comments: |
+        - 
+fluentd.01:
+    Nagios: "no"
+    comments: |
+        - 
+clamav:
+    Nagios: "no"
+    comments: |
+        - 
+synonym-service.01:
+    Nagios: "no"
+    comments: |
+        - 
+rocketchat:
+    Nagios: "no"
+    comments: |
+        - 
+mongo:
+    Nagios: "no"
+    comments: |
+        - 
+search-training-service.01:
+    Nagios: "no"
+    comments: |
+        - 
+sqs-relay.01:
+    Nagios: "no"
+    comments: |
+        - 
+redis_redis-cluster_1:
+    Nagios: "no"
+    comments: |
+        - 
+job-classification-data.01:
+    Nagios: "no"
+    comments: |
+        - 
+fluentd.01:
+    Nagios: "no"
+    comments: |
+        - 
+solr-index-candidates-failed:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_cvol-unfinished-registrations.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_snowplow-offline-event-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+profile-industry-prediction-tensorflow.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_process-report-email-queue.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-jobs-via-sqs.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_persist-iterable-settings.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time-queue-populator.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.08:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.07:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.06:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_watchdog-real-time.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_stat-and-report-queue-processor.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_stat-and-report-queue-processor.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_stat-and-report-queue-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates-low-pri.01:
+    Nagios: "no"
+    comments: |
+        - s
+cvl-platform-task_solr-index-candidates.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_solr-index-candidates.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_send-push-alerts.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_recommend-jbe-selector.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-modify-event.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.06:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-job-view-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_pfp-budget-threshold.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_google-job-indexer-sqs-cvl-uk.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_job-geo-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_external-url-checker.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_event-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_set-candidate-postcode.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_daxtra-cv-parsing.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-timeslot-sender-sqs-london.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.30:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.29:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.28:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.27:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.26:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.25:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.24:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.23:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.22:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.21:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.20:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.19:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.18:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.17:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.16:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.15:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.14:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.13:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.12:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.11:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.10:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.09:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.08:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.07:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.06:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_jbe-default-timeslot-sender.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_candidate-partial-registration-emailer.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_candidate-industry-prediction.01:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.10:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.09:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.08:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.07:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.06:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.05:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.04:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.03:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.02:
+    Nagios: "no"
+    comments: |
+        - 
+cvl-platform-task_brand-cvs.01:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.12:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.11:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.10:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.09:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.08:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.07:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.06:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.05:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.04:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.03:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.02:
+    Nagios: "no"
+    comments: |
+        - 
+bot-or-not.01:
+    Nagios: "no"
+    comments: |
+        - 
+update-seo-location:
+    Nagios: "no"
+    comments: |
+        - 
+send_web_push_notifications-morning:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.10:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.09:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.08:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.07:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.06:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.05:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.04:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.03:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.02:
+    Nagios: "no"
+    comments: |
+        - 
+doc-service-worker.01:
+    Nagios: "no"
+    comments: |
+        - 
+job-deleter.03:
+    Nagios: "no"
+    comments: |
+        - 
+job-deleter.02:
+    Nagios: "no"
+    comments: |
+        - 
+job-deleter.01:
+    Nagios: "no"
+    comments: |
+        - 
+pfp-report-event-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+pfp-event-processor.01:
+    Nagios: "no"
+    comments: |
+        - 
+doc-convert-service.02:
+    Nagios: "yes"
+    comments: |
+        - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity
+doc-convert-service.01:
+    Nagios: "yes"
+    comments: |
+        - doc-convert no output -> /usr/local/lib/nagios/plugins/check_file_age_multi script that checks /var/log/docker/doc-convert-service.*.log for any no activity

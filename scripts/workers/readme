@@ -1,0 +1,24 @@
+list1 from:
+
+docker ps -q | xargs -I ARGS docker inspect ARGS --format '{{.Name}} {{json .HostConfig.PortBindings}}' 
+
+
+list2 from:
+
+/home/cqueiroz/gitrepo/monitoring-tools/scripts/web04/gather_target_bind_ports.py
+
+
+
+list3 from:
+docker ps -q | xargs -I ARGS docker inspect ARGS --format '{{.Name}} {{json .Config.Env}}'  > /var/tmp/env_tmp
+
++
+~/gitrepo/monitoring-tools/scripts/format_env.sh
+
+
+
+List4 from (manually, do not delete it)
+
+List5 from (manually, do not delete it)
+
+List7 from (manually, do not delete it)

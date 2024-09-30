@@ -1,0 +1,51 @@
+store01:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Ceph bucket sharding -> /usr/local/lib/nagios/plugins/check_ceph_bucket_sharding perl script that returns any shard building-up.
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Users (check_users command) returns the users currently logged in
+           - ceph disk free -> /usr/local/lib/nagios/plugins/check_ceph_df python script that calls ceph binary and returns global RAW usage
+           - ceph health -> /usr/local/lib/nagios/plugins/check_ceph_health python scripts that returns the state of ceph. it needs to pass a client.nagios key.
+           - ceph monitor -> /usr/local/lib/nagios/plugins/check_ceph_mon py7thon script that return if the monitor is running. it also needs to pass the nagios keyring as a file.
+           - ceph storage OSD -> /usr/local/lib/nagios/plugins/check_ceph_osd python script. returns all OSD instances that is down and UP and its performance. it also needs to pass the nagios keyring as a file.
+store02:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Ceph bucket sharding -> /usr/local/lib/nagios/plugins/check_ceph_bucket_sharding perl script that returns any shard building-up.
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Users (check_users command) returns the users currently logged in
+           - ceph disk free -> /usr/local/lib/nagios/plugins/check_ceph_df python script that calls ceph binary and returns global RAW usage
+           - ceph health -> /usr/local/lib/nagios/plugins/check_ceph_health python scripts that returns the state of ceph. it needs to pass a client.nagios key.
+           - ceph monitor -> /usr/local/lib/nagios/plugins/check_ceph_mon py7thon script that return if the monitor is running. it also needs to pass the nagios keyring as a file.
+           - ceph storage OSD -> /usr/local/lib/nagios/plugins/check_ceph_osd python script. returns all OSD instances that is down and UP and its performance. it also needs to pass the nagios keyring as a file.
+store03:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - Ceph bucket sharding -> /usr/local/lib/nagios/plugins/check_ceph_bucket_sharding perl script that returns any shard building-up.
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - Users (check_users command) returns the users currently logged in
+           - ceph disk free -> /usr/local/lib/nagios/plugins/check_ceph_df python script that calls ceph binary and returns global RAW usage
+           - ceph health -> /usr/local/lib/nagios/plugins/check_ceph_health python scripts that returns the state of ceph. it needs to pass a client.nagios key.
+           - ceph monitor -> /usr/local/lib/nagios/plugins/check_ceph_mon py7thon script that return if the monitor is running. it also needs to pass the nagios keyring as a file.
+           - ceph storage OSD -> /usr/local/lib/nagios/plugins/check_ceph_osd python script. returns all OSD instances that is down and UP and its performance. it also needs to pass the nagios keyring as a file.

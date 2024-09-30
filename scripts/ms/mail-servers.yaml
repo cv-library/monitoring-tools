@@ -1,0 +1,176 @@
+ms02:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - In RBL-> /usr/local/bin/check_rbl command from monitor servers that pass a list of servers from anti-abuse.org and check if the domain is in the blacklist
+           - Invalid reverse DNS -> check_logfiles_reverse_dn script against /var/log/mail.log (to check RCPT response: does not have a reverse)
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - PING - icmp check from monitor servers
+           - Postfix Queue -> /usr/local/lib/nagios/plugins/check_postfix_queue script with no -i argment and it returns if the main queue incoming is OK
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-jbe -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-jbe. it returns if the postfix-jbe queue incoming is OK
+           - Postfix process limit -> /usr/local/lib/nagios/plugins/check_logfiles that checks against /var/log/mail.warn and it searches for (has reached its process limit)
+           - Postfix qmgr process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C qmgr. it returns OK if qmgr is running.
+           - Postfix smtp process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtp. it returns OK if smtp is running.
+           - Postfix smtpd process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtpd. it returns OK if smtpd is running.
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - SWAP -> /usr/lib/nagios/plugins/check_swap command that returns SWAP status and free space
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Single domain dominates active queue - Bulkmail -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-bulk and it returns active queue OK for bulk queue.
+           - Single domain dominates active queue - JBE -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-jbe and it returns active queue OK for jbe
+           - Single domain dominates active queue -> /usr/local/lib/nagios/plugins/check_postfix_active with no arg and it returns active queue OK for the main queue
+           - Unbound nameserver running -> /usr/lib/nagios/plugins/check_procs with arg -C unbound. it retuns OK if unbound process is running
+           - Users (check_users command) returns the users currently logged in
+           - logstash client connected -> /usr/local/lib/nagios/plugins/check_netstat script that returns if there is a established connection tcp5044
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+ms02-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - Senderscore Reputation -> /usr/local/lib/nagios/plugins/check_senderscore script from monitor servers which do a DNS lookup to reversed.octets.score.senderscore.com and get a senderscore.com mail score for that IP
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+ms03:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - In RBL-> /usr/local/bin/check_rbl command from monitor servers that pass a list of servers from anti-abuse.org and check if the domain is in the blacklist
+           - Invalid reverse DNS -> check_logfiles_reverse_dn script against /var/log/mail.log (to check RCPT response: does not have a reverse)
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - PING - icmp check from monitor servers
+           - Postfix Queue -> /usr/local/lib/nagios/plugins/check_postfix_queue script with no -i argment and it returns if the main queue incoming is OK
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-jbe -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-jbe. it returns if the postfix-jbe queue incoming is OK
+           - Postfix process limit -> /usr/local/lib/nagios/plugins/check_logfiles that checks against /var/log/mail.warn and it searches for (has reached its process limit)
+           - Postfix qmgr process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C qmgr. it returns OK if qmgr is running.
+           - Postfix smtp process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtp. it returns OK if smtp is running.
+           - Postfix smtpd process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtpd. it returns OK if smtpd is running.
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - SWAP -> /usr/lib/nagios/plugins/check_swap command that returns SWAP status and free space
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Single domain dominates active queue - Bulkmail -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-bulk and it returns active queue OK for bulk queue.
+           - Single domain dominates active queue - JBE -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-jbe and it returns active queue OK for jbe
+           - Single domain dominates active queue -> /usr/local/lib/nagios/plugins/check_postfix_active with no arg and it returns active queue OK for the main queue
+           - Unbound nameserver running -> /usr/lib/nagios/plugins/check_procs with arg -C unbound. it retuns OK if unbound process is running
+           - Users (check_users command) returns the users currently logged in
+           - logstash client connected -> /usr/local/lib/nagios/plugins/check_netstat script that returns if there is a established connection tcp5044
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+ms03-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - Senderscore Reputation -> /usr/local/lib/nagios/plugins/check_senderscore script from monitor servers which do a DNS lookup to reversed.octets.score.senderscore.com and get a senderscore.com mail score for that IP
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+ms04:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - In RBL-> /usr/local/bin/check_rbl command from monitor servers that pass a list of servers from anti-abuse.org and check if the domain is in the blacklist
+           - Invalid reverse DNS -> check_logfiles_reverse_dn script against /var/log/mail.log (to check RCPT response: does not have a reverse)
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - PING - icmp check from monitor servers
+           - Postfix Queue -> /usr/local/lib/nagios/plugins/check_postfix_queue script with no -i argment and it returns if the main queue incoming is OK
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-jbe -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-jbe. it returns if the postfix-jbe queue incoming is OK
+           - Postfix process limit -> /usr/local/lib/nagios/plugins/check_logfiles that checks against /var/log/mail.warn and it searches for (has reached its process limit)
+           - Postfix qmgr process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C qmgr. it returns OK if qmgr is running.
+           - Postfix smtp process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtp. it returns OK if smtp is running.
+           - Postfix smtpd process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtpd. it returns OK if smtpd is running.
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - SWAP -> /usr/lib/nagios/plugins/check_swap command that returns SWAP status and free space
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Single domain dominates active queue - Bulkmail -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-bulk and it returns active queue OK for bulk queue.
+           - Single domain dominates active queue - JBE -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-jbe and it returns active queue OK for jbe
+           - Single domain dominates active queue -> /usr/local/lib/nagios/plugins/check_postfix_active with no arg and it returns active queue OK for the main queue
+           - Unbound nameserver running -> /usr/lib/nagios/plugins/check_procs with arg -C unbound. it retuns OK if unbound process is running
+           - Users (check_users command) returns the users currently logged in
+           - logstash client connected -> /usr/local/lib/nagios/plugins/check_netstat script that returns if there is a established connection tcp5044
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+ms04-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - Senderscore Reputation -> /usr/local/lib/nagios/plugins/check_senderscore script from monitor servers which do a DNS lookup to reversed.octets.score.senderscore.com and get a senderscore.com mail score for that IP
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)
+ms05:
+    Nagios: "YES"
+    nagios_comments: |
+           - APT -> script check_apt (the script will return OK if there is no critical updates)
+           - BBU -> check_logical_drive script that returns megaCli64 state output command
+           - cron service (check if service is running)
+           - cron syntax (checking the cron syntax command - check cfg)
+           - Disk Space (*) - check_disk command passing no arguments, return all mountpoints
+           - In RBL-> /usr/local/bin/check_rbl command from monitor servers that pass a list of servers from anti-abuse.org and check if the domain is in the blacklist
+           - Invalid reverse DNS -> check_logfiles_reverse_dn script against /var/log/mail.log (to check RCPT response: does not have a reverse)
+           - load (load 1, 5, 15 min) - check_load script
+           - Logical drive -> /usr/local/lib/nagios/plugins/check_logical_drive script, and it returns OK the megaCli64 drive state output.
+           - Processes ( check_nrpe_procs command, remote call from monitor server) - returns total of processes running on the host
+           - PING - icmp check from monitor servers
+           - Postfix Queue -> /usr/local/lib/nagios/plugins/check_postfix_queue script with no -i argment and it returns if the main queue incoming is OK
+           - Postfix Queue postfix-bulk -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-bulk. it returns if the postfix-bulk queue incoming is OK
+           - Postfix Queue postfix-jbe -> /usr/local/lib/nagios/plugins/check_postfix_queue script with -i postfix-jbe. it returns if the postfix-jbe queue incoming is OK
+           - Postfix process limit -> /usr/local/lib/nagios/plugins/check_logfiles that checks against /var/log/mail.warn and it searches for (has reached its process limit)
+           - Postfix qmgr process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C qmgr. it returns OK if qmgr is running.
+           - Postfix smtp process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtp. it returns OK if smtp is running.
+           - Postfix smtpd process running -> /usr/lib/nagios/plugins/check_procs  with the argument -C smtpd. it returns OK if smtpd is running.
+           - RAID (check_raid script, which uses MegaRaid/MegaCli to check the status of the raid and the disks)
+           - SMTP -> run check_smtp command from monitor servers passing the port 25
+           - SMTP_2525 -> run check_smtp command from monitor servers passing the port 2525
+           - SMTP_2526 -> run check_smtp command from monitor servers passing the port 2526
+           - SSH -> check_ports_closed scripts running from monitor servers with argument 22, itt returns OK if SSH responds with the payload
+           - SWAP -> /usr/lib/nagios/plugins/check_swap command that returns SWAP status and free space
+           - Shorewall (check_shorewall command) - return if firewall whether is running or not
+           - Single domain dominates active queue - Bulkmail -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-bulk and it returns active queue OK for bulk queue.
+           - Single domain dominates active queue - JBE -> /usr/local/lib/nagios/plugins/check_postfix_active with arg -i postfix-jbe and it returns active queue OK for jbe
+           - Single domain dominates active queue -> /usr/local/lib/nagios/plugins/check_postfix_active with no arg and it returns active queue OK for the main queue
+           - Unbound nameserver running -> /usr/lib/nagios/plugins/check_procs with arg -C unbound. it retuns OK if unbound process is running
+           - Users (check_users command) returns the users currently logged in
+           - logstash client connected -> /usr/local/lib/nagios/plugins/check_netstat script that returns if there is a established connection tcp5044
+           - qpsmtpd port -> /usr/lib/nagios/plugins/check_smtp script which launches tcp check on the port 10025 from MS servers (localhost:10025)
+           - qpsmtpd recent logfile activity -> /usr/lib/nagios/plugins/check_file_age script that checks the age against /var/log/qpsmtpd/qpsmtpd.log file.
+           - qpsmtpd running -> /usr/lib/nagios/plugins/check_procs with arg -C qpsmtpd-prefork and returns OK when qpsmtpd-prefork is running.
+ms05-ext:
+    Nagios: "YES"
+    nagios_comments: |
+           - Check A and PTR DNS records (check_a_and_ptr script running from monitor server)
+           - Check open ports (active checks disabled)
+           - Senderscore Reputation -> /usr/local/lib/nagios/plugins/check_senderscore script from monitor servers which do a DNS lookup to reversed.octets.score.senderscore.com and get a senderscore.com mail score for that IP
+           - check external SSH closed (command check_ports_closed!22, running from monitor servers)

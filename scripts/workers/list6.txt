@@ -1,0 +1,64 @@
+solr72-jobs-backfill:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-requests:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-trial-requests:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-tasks:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-geo:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-accounts-notes:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-accounts:
+    Dashboard "yes"
+    comments: |
+        - 
+solr45-account-requests:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-candidates:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-trial-searches:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-salaries:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-jobtitles:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-companies:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-builder-dict:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-addresses:
+    Dashboard "yes"
+    comments: |
+        - 
+solr72-jobs:
+    Dashboard "yes"
+    comments: |
+        - 
