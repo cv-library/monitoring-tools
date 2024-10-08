@@ -482,11 +482,11 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "count by (app) (cron_execution)",
+          "expr": "cron_execution",
           "format": "table",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
-          "legendFormat": "{{app_name}}",
+          "legendFormat": "__auto",
           "range": true,
           "refId": "A",
           "useBackend": false
@@ -500,6 +500,10 @@
           "options": {
             "fields": {
               "app": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "status": {
                 "aggregations": [],
                 "operation": "groupby"
               }
@@ -552,6 +556,6 @@
   "timezone": "browser",
   "title": "Cron exec exporter",
   "uid": "de06je45mwydce",
-  "version": 13,
+  "version": 14,
   "weekStart": ""
 }
