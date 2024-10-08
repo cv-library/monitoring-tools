@@ -1,0 +1,128 @@
+feed-importer-openrefine-service:
+    Monitoring: "no"
+    comments: |
+        - 
+title-skills-filter-service:
+    Monitoring: "no"
+    comments: |
+        - 
+kafka-rest-proxy:
+    Monitoring: "yes"
+    comments: |
+        - basic metrics collected and alerting via grafana.ops. JMX topic exporter needs to be set up to have access to topics and sink connectors metrics
+haproxy:
+    Monitoring: "no"
+    comments: |
+        - 
+ingress:
+    Monitoring: "no"
+    comments: |
+        - 
+job-search-www:
+    Monitoring: "no"
+    comments: |
+        - 
+cvol-gateway-k8s-app:
+    Monitoring: "no"
+    comments: |
+        - 
+cvol-garden-buildkit:
+    Monitoring: "no"
+    comments: |
+        - 
+nextjs-prototype-k8s-app:
+    Monitoring: "no"
+    comments: |
+        - 
+argocd:
+    Monitoring: "no"
+    comments: |
+        - 
+memcached:
+    Monitoring: "no"
+    comments: |
+        - 
+snowplow-collector-garden-buildkit:
+    Monitoring: "no"
+    comments: |
+        - 
+rds-aurora-mysql-cluster:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-couchdb01:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-couchdb-job01:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-couchdb03:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-couchdb-job03:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-jump-box-2:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-cvl-puppetserver01:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-benchmark-traveltime:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-victoria01:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-loki01:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-app06:
+    Monitoring: "yes"
+    comments: |
+        - External test from nagios (closed ports)
+ec2-zk05:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-zk04:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-zk06:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-cvl-grafana:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-cvl-prometheus:
+    Monitoring: "no"
+    comments: |
+        - 
+ec2-cvl-percona:
+    Monitoring: "no"
+    comments: |
+        - 
+JBE:
+    Monitoring: "yes"
+    comments: |
+        - The JBE send rate is lower than usual. cloudwatch datasource  QueueName: production_jbe_emails
+SSL-Certificates:
+    Monitoring: "yes"
+    comments: |
+        - blackbox metrics from a prometheus datasource (probe_ssl_earliest_cert_expiry)
+Terrarunners:
+    Monitoring: "yes"
+    comments: |
+        - cloudwatch datasource: terrarunner-staging-scale-up (against lambda)

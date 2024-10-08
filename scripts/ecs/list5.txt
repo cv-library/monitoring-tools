@@ -1,0 +1,117 @@
+feed-importer-openrefine-service:
+    Logs: "yes"
+    comments: |
+        - cloudwatch ECS service
+title-skills-filter-service:
+    Logs: "yes"
+    comments: |
+        - cloudwatch ECS service
+kafka-rest-proxy:
+    Logs: "yes"
+    comments: |
+        - cloudwatch /aws/eks/cvl-eks-production/workload/kafka-rest-proxy
+haproxy:
+    Logs: "yes"
+    comments: |
+        - cloudwatch /aws/eks/cvl-eks-production/workload/haproxy
+ingress:
+    Logs: "yes"
+    comments: |
+        - cloudwatch /aws/eks/cvl-eks-production/workload/ingress
+job-search-www:
+    Logs: "no"
+    comments: |
+        - not in live yet *
+cvol-gateway-k8s-app:
+    Logs: "yes"
+    comments: |
+        - 
+cvol-garden-buildkit:
+    Logs: "no"
+    comments: |
+        - 
+nextjs-prototype-k8s-app:
+    Logs: "no"
+    comments: |
+        - 
+argocd:
+    Logs: "yes"
+    comments: |
+        - cloudwatch /aws/eks/cvl-eks-production/workload/argocd
+        - CVOL deployment notifications based on events - it goes to opsgenie
+memcached:
+    Logs: "no"
+    comments: |
+        - 
+snowplow-collector-garden-buildkit:
+    Logs: "yes"
+    comments: |
+        - 
+rds-aurora-mysql-cluster:
+    Logs: "yes"
+    comments: |
+        - 
+ec2-couchdb01:
+    Logs: "no"
+    comments: |
+        - 
+ec2-couchdb-job01:
+    Logs: "no"
+    comments: |
+        - 
+ec2-couchdb03:
+    Logs: "no"
+    comments: |
+        - 
+ec2-couchdb-job03:
+    Logs: "no"
+    comments: |
+        - 
+ec2-jump-box-2:
+    Logs: "no"
+    comments: |
+        - 
+ec2-cvl-puppetserver01:
+    Logs: "no"
+    comments: |
+        - 
+ec2-benchmark-traveltime:
+    Logs: "no"
+    comments: |
+        - 
+ec2-victoria01:
+    Logs: "no"
+    comments: |
+        - 
+ec2-loki01:
+    Logs: "no"
+    comments: |
+        - 
+ec2-app06:
+    Logs: "yes"
+    comments: |
+        - cloudwatch /aws/ec2/app06
+ec2-zk05:
+    Logs: "no"
+    comments: |
+        - 
+ec2-zk04:
+    Logs: "no"
+    comments: |
+        - 
+ec2-zk06:
+    Logs: "no"
+    comments: |
+        - 
+ec2-cvl-grafana:
+    Logs: "no"
+    comments: |
+        - 
+ec2-cvl-prometheus:
+    Logs: "no"
+    comments: |
+        - 
+ec2-cvl-percona:
+    Logs: "no"
+    comments: |
+        - 

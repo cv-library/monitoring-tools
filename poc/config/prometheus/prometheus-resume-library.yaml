@@ -1,5 +1,5 @@
 global:
-  scrape_interval: 5s
+  scrape_interval: 60s
   external_labels:
     cluster: resume-library
     namespace: poc

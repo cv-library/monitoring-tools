@@ -1,0 +1,28 @@
+x-logging: &default-logging
+  driver: loki
+  options:
+    loki-url: 'http://localhost:3100/loki/api/v1/push'
+    loki-tenant-id: 'cv-library'
+    loki-pipeline-stages: |
+      - multiline:
+          firstline: '^\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2}'
+          max_wait_time: 3s
+      - regex:
+          expression: '^(?P<time>\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}:\d{2},d{3}) (?P<message>(?s:.*))$$'
+
+version: "3.4"
+services:
+  cron_exec_exporter:
+    build:
+      context: ./cron
+      dockerfile: Dockerfile
+    image: poc/cron_exec_exporter:1.0
+    ports:
+      - "5001:5001"
+    volumes:
+      - "./cron/metrics.db:/app/metrics.db"
+      - "./cron/main.py:/app/main.py"
+    environment:
+      APP_NAME: "cron_exec_exporter"
+      TENANT: "cv-library"
+    logging: *default-logging

@@ -1,0 +1,266 @@
+listen: stats
+bind port: 9000
+servers: []
+port_target: None
+
+
+listen: www
+bind port: 9001
+httpchk: /
+servers: ['app01', 'app02', 'app04', 'app05', 'app06']
+port_target: 5021
+
+
+listen: feed-api
+bind port: 9120
+httpchk: /
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5061
+
+
+listen: job-search-api
+bind port: 9121
+httpchk: /
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5021
+
+
+listen: business-accounts
+bind port: 9108
+httpchk: HEAD /v1/health
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5057
+
+
+listen: classify
+bind port: 9013
+httpchk: HEAD /
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5002
+
+
+listen: doc-convert-api
+bind port: 9037
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5013
+
+
+listen: doc-service
+bind port: 9074
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5032
+
+
+listen: doc-view-service
+bind port: 9032
+httpchk: GET /health
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5009
+
+
+listen: file
+bind port: 9021
+httpchk: HEAD /health
+servers: ['worker01-green', 'worker01-blue']
+port_target: 5003
+
+
+listen: locations
+bind port: 9014
+httpchk: HEAD /
+servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+port_target: 5004
+
+
+listen: mail-validation
+bind port: 9085
+httpchk: GET /health
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5037
+
+
+listen: phpmyadmin
+bind port: 9009
+servers: ['app01']
+port_target: 5019
+
+
+listen: pfp
+bind port: 9077
+httpchk: GET /health
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5034
+
+
+listen: prs
+bind port: 9068
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5028
+
+
+listen: qrcodes
+bind port: 9019
+httpchk: GET /solr45/requests/select?q=document_id:0
+servers: ['app01', 'app02', 'app04', 'app05', 'search04', 'search04-8093', 'search05-8093', 'search06-8093', 'search04-8092', 'search05-8092', 'search06-8092', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search04-8093', 'search05-8093', 'search06-8093', 'search04-8092', 'search05-8092', 'search06-8092', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06', 'search04', 'search05', 'search06']
+port_target: 8093
+
+
+listen: solr-jobs-v72
+bind port: 9055
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8097
+
+
+listen: solr-jobs-v72-long
+bind port: 9056
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8097
+
+
+listen: solr-addresses
+bind port: 9054
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8098
+
+
+listen: solr-addresses-long
+bind port: 9057
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8098
+
+
+listen: solr-jobs-backfill
+bind port: 9061
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8100
+
+
+listen: solr-jobs-backfill-long
+bind port: 9062
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8100
+
+
+listen: solr-jobtitles
+bind port: 9064
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8087
+
+
+listen: solr-jobtitles-long
+bind port: 9065
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8087
+
+
+listen: solr-candidates
+bind port: 9072
+httpchk: GET /solr/candidates/select?q=id:0
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8101
+
+
+listen: solr-candidates-long
+bind port: 9073
+httpchk: GET /solr/candidates/select?q=id:0
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8101
+
+
+listen: solr-bool-builder-dict
+bind port: 9075
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8102
+
+
+listen: solr-companies
+bind port: 9079
+servers: ['search04', 'search05', 'search06']
+port_target: 8103
+
+
+listen: solr-salaries
+bind port: 9083
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8104
+
+
+listen: spellchecker
+bind port: 9023
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5026
+
+
+listen: ceph-radosgw
+bind port: 9044
+httpchk: HEAD /
+servers: ['store01', 'store02', 'store03']
+port_target: 80
+
+
+listen: synonym-service
+bind port: 9063
+httpchk: HEAD /auth/login/
+servers: ['worker01', 'worker02']
+port_target: 5000
+
+
+listen: rocketchat
+bind port: 9066
+httpchk: HEAD /
+servers: ['worker02']
+port_target: 3000
+
+
+listen: search-training-service
+bind port: 9067
+httpchk: HEAD /
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5027
+
+
+listen: kibana
+bind port: 9081
+httpchk: HEAD /api/status
+servers: ['log03', 'log04', 'log05']
+port_target: 5601
+
+
+listen: cerebro
+bind port: 9082
+servers: ['log03', 'log04', 'log05']
+port_target: 9000
+
+
+listen: job-info
+bind port: 9088
+httpchk: GET /health
+servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+port_target: 5040
+
+
+listen: solr-trial-searches
+bind port: 9100
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8105
+
+
+listen: solr-trial-searches-long
+bind port: 9101
+servers: ['search04', 'search05', 'search06', 'search10', 'search11']
+port_target: 8105
+
+
+listen: job-connector
+bind port: 9106
+httpchk: GET /v1/health
+servers: ['app01', 'app02', 'app04', 'app05', 'worker01', 'worker02']
+port_target: 5056
+
+
+listen: tableau-user
+bind port: 9113
+httpchk: GET /v1/health
+servers: ['app01', 'app02', 'app04', 'app05']
+port_target: 5060
+

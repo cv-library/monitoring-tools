@@ -1,5 +1,5 @@
 global:
-  scrape_interval: 5s
+  scrape_interval: 60s
   external_labels:
     cluster: cv-library
     namespace: poc
@@ -19,7 +19,11 @@ scrape_configs:
       - targets: ['candidates-cv-library:8000']
         labels:
           container: 'candidates-cv-library'
-
+  - job_name: cv-library/cron_exec_exporter
+    static_configs:
+      - targets: ['cron_exec_exporter:5001']
+        labels:
+          container: 'cron_exec_exporter'
 
 remote_write:
   - url: http://load-balancer:9009/api/v1/push

@@ -36,6 +36,7 @@ services:
       - ./dashboards/observability_multitenancy.json:/var/lib/grafana/dashboards/observability_multitenancy.json
       - ./dashboards/cadvisor_insights.json:/var/lib/grafana/dashboards/cadvisor_insights.json:ro
       - ./dashboards/node_exporter.json:/var/lib/grafana/dashboards/node_exporter.json:ro
+      - ./dashboards/cron_exec_exporter.json:/var/lib/grafana/dashboards/cron_exec_exporter.json
     ports:
       - 9000:3000
     logging: *default-logging
