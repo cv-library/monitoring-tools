@@ -24,21 +24,13 @@ async def init_db():
         ''')
         await db.commit()
 
-def parse_mixed_datetime(datetime_str):
-    try:
-        # Try parsing with microseconds first
-        return datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S.%f")
-    except ValueError:
-        # If microseconds are not present, parse without them
-        return datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
-
 
 def datetime_to_timestamp(datetime_input):
-    
+    # Check if the input is already a datetime object
     if isinstance(datetime_input, datetime):
         return datetime_input.timestamp()
     else:
-    
+        # If it's a string, convert it to a datetime object first
         datetime_obj = datetime.strptime(datetime_input, "%Y-%m-%d %H:%M:%S")
         return datetime_obj.timestamp()
 
@@ -76,7 +68,7 @@ def calculate_next_run(last_updated, schedule):
     return next_run
 
 async def insert_or_update_metric(app_name, metric_name, value, schedule, host):
-    last_updated = datetime.utcnow()#.strftime("%Y-%m-%d %H:%M:%S")
+    last_updated = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
     
     next_run = calculate_next_run(last_updated, schedule)
 
@@ -130,7 +122,7 @@ async def metrics():
                         response += f'{metric_name}{{app="{app_name}", status="missing", host="{host}"}} 1\n'
                 else:
                     response += f'{metric_name}{{app="{app_name}", status="missing", host="{host}"}} 1\n'
-#
+
         async with db.execute('SELECT app_name, metric_name, value, host, next_run FROM metrics') as cursor1:
             repeat = True
             async for app_name, metric_name, value, host, next_run_str in cursor1:
@@ -138,12 +130,12 @@ async def metrics():
                     response += f'# HELP cron_execution_next_run Next run for cronjob executions\n'
                     response += f'# TYPE cron_execution_next_run gauge\n'
                     repeat = False
-#
+
                 if next_run_str:
                     next_run = datetime.strptime(next_run_str, "%Y-%m-%d %H:%M:%S")
                     timestamp = int(datetime_to_timestamp(next_run))
                     response += f'cron_execution_next_run{{app="{app_name}", host="{host}"}} {timestamp}\n'
-#
+
         async with db.execute('SELECT app_name, metric_name, value, host, last_updated, next_run FROM metrics') as cursor2:
             repeat = True
             async for app_name, metric_name, value, host,last_updated, next_run_str in cursor2:
@@ -151,12 +143,10 @@ async def metrics():
                     response += f'# HELP cron_execution_last_run Last run for cronjob executions\n'
                     response += f'# TYPE cron_execution_last_run gauge\n'
                     repeat = False
-#
+
                 if last_updated:
-#                    last_updated = datetime.strptime(last_updated, "%Y-%m-%d %H:%M:%S")
-                   
-                    timestamp = int(datetime_to_timestamp(parse_mixed_datetime(last_updated)))
-#                    timestamp = 3333
+                    last_updated = datetime.strptime(last_updated, "%Y-%m-%d %H:%M:%S")
+                    timestamp = int(datetime_to_timestamp(last_updated))
                     response += f'cron_execution_last_run{{app="{app_name}", host="{host}"}} {timestamp}\n'
 
 
