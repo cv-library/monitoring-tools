@@ -21,7 +21,7 @@ scrape_configs:
           container: 'candidates-cv-library'
   - job_name: cv-library/cron_exec_exporter
     static_configs:
-      - targets: ['cron_exec_exporter:5001']
+      - targets: ['cron_exec_exporter:5002']
         labels:
           container: 'cron_exec_exporter'
 

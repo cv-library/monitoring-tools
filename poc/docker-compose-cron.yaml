@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile
     image: poc/cron_exec_exporter:1.0
     ports:
-      - "5001:5001"
+      - "5002:5002"
     volumes:
       - "./cron/metrics.db:/app/metrics.db"
       - "./cron/main.py:/app/main.py"
