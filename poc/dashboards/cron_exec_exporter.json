@@ -433,7 +433,7 @@
           "custom": {
             "align": "auto",
             "cellOptions": {
-              "type": "auto"
+              "type": "color-text"
             },
             "inspect": false
           },
@@ -447,12 +447,65 @@
               },
               {
                 "color": "red",
-                "value": 80
+                "value": ""
+              },
+              {
+                "color": "#EAB839",
+                "value": ""
               }
             ]
           }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "failed": {
+                        "color": "orange",
+                        "index": 1,
+                        "text": "failed"
+                      },
+                      "missing": {
+                        "color": "red",
+                        "index": 2,
+                        "text": "missing"
+                      },
+                      "success": {
+                        "color": "green",
+                        "index": 0,
+                        "text": "success"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "app"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "auto",
+                  "wrapText": true
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 12,
@@ -471,7 +524,13 @@
           ],
           "show": false
         },
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "status"
+          }
+        ]
       },
       "pluginVersion": "11.2.0",
       "targets": [
@@ -556,6 +615,6 @@
   "timezone": "browser",
   "title": "Cron exec exporter",
   "uid": "de06je45mwydce",
-  "version": 14,
+  "version": 16,
   "weekStart": ""
 }
