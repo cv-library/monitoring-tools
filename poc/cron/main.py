@@ -17,7 +17,7 @@ async def init_db():
                 host TEXT,
                 last_updated DATETIME DEFAULT CURRENT_TIMESTAMP,
                 next_run DATETIME DEFAULT NULL,
-                PRIMARY KEY (app_name, metric_name)
+                PRIMARY KEY (app_name, metric_name, host)
             )
         ''')
         await db.commit()
@@ -61,8 +61,8 @@ async def insert_or_update_metric(app_name, metric_name, value, schedule, host):
         await db.execute('''
             INSERT INTO metrics (app_name, metric_name, value, schedule, host, last_updated, next_run) 
             VALUES (?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(app_name, metric_name) 
-            DO UPDATE SET value=excluded.value, schedule=excluded.schedule, host=excluded.host, 
+            ON CONFLICT(app_name, metric_name, host) 
+            DO UPDATE SET value=excluded.value, schedule=excluded.schedule, 
             last_updated=CURRENT_TIMESTAMP, next_run=excluded.next_run
         ''', (app_name, metric_name, value, schedule, host, last_updated, next_run))
         await db.commit()
