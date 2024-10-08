@@ -1,3 +1,8 @@
+# schedule: ********
+# mmhhddMM (13:35 20/10 = 35132010)
+
+
+
 # hourly
 ./script.sh; curl -X POST http://localhost:5001/v1/post_metric \
 -H "Content-Type: application/json" \
