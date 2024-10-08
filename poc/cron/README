@@ -4,47 +4,47 @@
 
 
 # hourly
-./script.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_hourly_14\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"25******\"}"
+-d "{\"app_name\": \"cron_test_hourly_14\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"25******\", \"host\": \"$HOST\"}"
 
 
 
-> ./script_failed.sh; curl -X POST http://localhost:5001/v1/post_metric \
+> ./script_failed.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_hourly_14\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"25******\"}"
+-d "{\"app_name\": \"cron_test_hourly_14\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"25******\", \"host\": \"$HOST\"}"
 
 
 #daily
-./script_failed.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script_failed.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_daily_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"2016****\"}"
+-d "{\"app_name\": \"cron_test_daily_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"2016****\", \"host\": \"$HOST\"}"
 
-./script.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_daily_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"2016****\"}"
+-d "{\"app_name\": \"cron_test_daily_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"2016****\", \"host\": \"$HOST\"}"
 
 
 
 #monthly
-./script.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_monthly_4\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"201608**\"}"
+-d "{\"app_name\": \"cron_test_monthly_4\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"201608**\", \"host\": \"$HOST\"}"
 
 
-./script_failed.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script_failed.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_monthly_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"201608**\"}"
+-d "{\"app_name\": \"cron_test_monthly_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"201608**\", \"host\": \"$HOST\"}"
 
 #yearly
 
-./script.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_yearly_4\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"20160810\"}"
+-d "{\"app_name\": \"cron_test_yearly_4\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"20160810\", \"host\": \"$HOST\"}"
 
 
-./script_failed.sh; curl -X POST http://localhost:5001/v1/post_metric \
+./script_failed.sh; curl -X POST http://localhost:5002/v1/post_metric \
 -H "Content-Type: application/json" \
--d "{\"app_name\": \"cron_test_yearly_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"20160810\"}"
+-d "{\"app_name\": \"cron_test_yearly_5\", \"metric_name\": \"cron_execution\", \"value\": $? , \"schedule\": \"20160810\", \"host\": \"$HOST\"}"
 
 
