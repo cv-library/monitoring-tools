@@ -18,10 +18,11 @@ services:
       dockerfile: Dockerfile
     image: poc/cron_exec_exporter:1.0
     ports:
-      - "5002:5002"
+      - "5902:5902"
     volumes:
-      - "./cron/metrics.db:/app/metrics.db"
+      - "./cron/db:/db/"
       - "./cron/main.py:/app/main.py"
+      - "./cron/nextrun.py:/app/nextrun.py"
     environment:
       APP_NAME: "cron_exec_exporter"
       TENANT: "cv-library"

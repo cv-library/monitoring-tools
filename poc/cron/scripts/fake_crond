@@ -1,0 +1,28 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+#45 21 * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-jbe-default-timeslot-sender.sh; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "fake-jbe-default-timeslot-sender" $exit_code "2-59/10|0-23|*|*|1-7" "worker01" 
+
+
+
+#*/15 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-1 /srv/cvl/bin/jbe-process-default-timeslot 1; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-1" $exit_code "*/15|*|*|*|*" "worker01" 
+
+* * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-2 /srv/cvl/bin/jbe-process-default-timeslot 2; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-2" $exit_code "*/20|*|*|*|*" "worker01" 
+
+#*/30 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-4 /srv/cvl/bin/jbe-process-default-timeslot 4; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-4" $exit_code "*/30|*|*|*|*" "worker01" 
+
+#2-55/18 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-3 /srv/cvl/bin/jbe-process-default-timeslot 3; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-3" $exit_code "2-55/18|*|*|*|*" "worker01" 
+
+2-55/18 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base_error jbe-process-default-timeslot-3 /srv/cvl/bin/jbe-process-default-timeslot 3; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-3" $exit_code "2-55/18|*|*|*|*" "worker02" 
+
+
+39 21 * * 3 cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-5 /srv/cvl/bin/jbe-process-default-timeslot 5; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-5" $exit_code "39|21|*|*|3" "worker01" 
+
+
+*/15 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base_error jbe-process-default-timeslot-8 /srv/cvl/bin/jbe-process-default-timeslot 8; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-8" $exit_code "*/15|*|*|*|*" "worker01"
+
+*/15 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-8 /srv/cvl/bin/jbe-process-default-timeslot 8; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-8" $exit_code "*/15|*|*|*|*" "worker02"
+
+
+#*/3 * * * * cqueiroz start_time=$(date +\%s); /home/cqueiroz/fake/fake-cron-run-perl-base jbe-process-default-timeslot-11 /srv/cvl/bin/jbe-process-default-timeslot 11; exit_code=$?; /home/cqueiroz/fake/helper.sh $start_time "jbe-process-default-timeslot-11" $exit_code "*/3|*|*|*|*" "worker02"
+
