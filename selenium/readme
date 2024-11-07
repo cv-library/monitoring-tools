@@ -1,0 +1,6 @@
+> docker build . -t selenium:1.0             
+
+> docker run --network=host --rm selenium:1.0
+passed
+20,000+  Resumes matched
+
