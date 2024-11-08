@@ -1,6 +1,10 @@
 > docker build . -t selenium:1.0             
 
-> docker run --network=host --rm selenium:1.0
+docker run -d  --restart always -p 9091:9091 --name pushgateway prom/pushgateway
+
+
+>docker run --network=host -e 'USER=blabla' -e 'PASS=blabla' -v /home/cqueiroz/gitrepo/monitoring-tools/selenium/main.py:/app/main.py --rm selenium:1.0
+
 passed
 20,000+  Resumes matched
 
